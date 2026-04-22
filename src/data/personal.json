@@ -1,0 +1,73 @@
+{
+  "personal_info": {
+    "name": "Alberto González",
+    "role": "Desarrollador Full Stack · IA",
+    "location": "Ciudad de México, México",
+    "coordinates": "19.4326° N, 99.1332° W",
+    "availability": "Disponible para proyectos freelance",
+    "bio_short": "Ingeniero en Informática con más de 3 años construyendo producto en empresas de software. Full Stack con alma de Frontend — especializado en Vue.js, Svelte y .NET MVC. Apasionado por la IA aplicada: no solo la uso, aprendo cómo funciona.",
+    "hero_phrases": [
+      "> Construyendo con Vue, Svelte y .NET...",
+      "> Full Stack con alma de Frontend...",
+      "> Aprendiendo con las máquinas, no solo de ellas...",
+      "> De la idea al deploy, sin perder calidad...",
+      "> APIs REST · Docker · Node.js · SQL Server..."
+    ]
+  },
+  "stats": [
+    {
+      "id": "experience",
+      "value": "3",
+      "unit": "+",
+      "label": "años exp."
+    },
+    {
+      "id": "projects",
+      "value": "10",
+      "unit": "+",
+      "label": "proyectos"
+    },
+    {
+      "id": "certifications",
+      "value": "5",
+      "unit": "",
+      "label": "certificaciones"
+    },
+    {
+      "id": "coffee",
+      "value": "01",
+      "unit": "",
+      "label": "cafés/hora"
+    }
+  ],
+  "social_links": [
+    {
+      "id": "email",
+      "label": "Email",
+      "value": "albert.gonzalez0297@gmail.com",
+      "url": "mailto:albert.gonzalez0297@gmail.com"
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "value": "@AlbertGlez97",
+      "url": "https://github.com/AlbertGlez97"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "value": "in/albertglez97",
+      "url": "https://www.linkedin.com/in/albertglez97"
+    }
+  ],
+  "contact": {
+    "email": "albert.gonzalez0297@gmail.com",
+    "response_time_hours": 24,
+    "intro": "Siempre abierto a nuevos proyectos, colaboraciones o simplemente a conectar. Respondo en menos de 24h.",
+    "form_placeholders": {
+      "name": "¿Cómo te llamas?",
+      "email": "tu@email.com",
+      "message": "Cuéntame de tu proyecto..."
+    }
+  }
+}

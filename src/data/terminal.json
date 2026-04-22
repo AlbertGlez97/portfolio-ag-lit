@@ -1,0 +1,47 @@
+{
+  "terminal": {
+    "neofetch": {
+      "os": "Arch Linux x86_64",
+      "kernel": "6.8.9-arch1-1",
+      "wm": "Hyprland",
+      "shell": "zsh 5.9",
+      "terminal": "kitty",
+      "editor": "Neovim",
+      "cpu": "Intel Core i5",
+      "memory": "16 GiB / 32 GiB"
+    },
+    "stack_items": [
+      {
+        "label": "Editor",
+        "value": "Neovim"
+      },
+      {
+        "label": "Shell",
+        "value": "zsh + oh-my-zsh"
+      },
+      {
+        "label": "Frontend",
+        "value": "Vue.js 3 / Svelte"
+      },
+      {
+        "label": "Backend",
+        "value": ".NET MVC / Node.js"
+      },
+      {
+        "label": "DB",
+        "value": "SQL Server / MongoDB"
+      },
+      {
+        "label": "Deploy",
+        "value": "Docker / GitLab CI"
+      }
+    ],
+    "now_items": [
+      "Desarrollador Frontend en Sye Software, CDMX",
+      "Módulo de Consultas con Svelte + Redux",
+      "Construyendo este portafolio con Lit Element",
+      "Explorando integraciones de IA en proyectos web"
+    ],
+    "readme_content": "# Alberto González\n\nFull Stack Developer con +3 años de experiencia.\nEspecializado en Vue.js, Svelte y .NET MVC.\n\n## Stack principal\n- Frontend:  Vue.js 3, Svelte, TypeScript, JavaScript ES6+\n- Backend:   C# .NET MVC, Node.js, Express\n- DB:        SQL Server, MongoDB\n- DevOps:    Docker, GitLab CI, GitHub\n\n## Experiencia\n- Sye Software       (2024–hoy)  → Frontend Dev\n- Towa Software      (2022–2024) → Full Stack Dev\n- StrApps Consulting (2021–2022) → Dev (Prácticas)\n\n## Educación\nIng. en Informática — TESE, 2022\n\n## Contacto\nalbert.gonzalez0297@gmail.com\ngithub.com/AlbertGlez97"
+  }
+}

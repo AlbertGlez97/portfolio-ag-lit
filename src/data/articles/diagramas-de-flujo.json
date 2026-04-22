@@ -1,0 +1,528 @@
+{
+  "id": "diagramas-de-flujo",
+  "slug": "diagramas-de-flujo-guia-practica",
+  "category": "cs",
+  "published_at": "2026-04-22",
+  "updated_at": null,
+  "read_minutes": 7,
+  "related_ids": [],
+  "featured": false,
+  "featured_svg": "<svg viewBox=\"0 0 600 420\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"df-bg\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#0d1117\"/><stop offset=\"100%\" stop-color=\"#07090f\"/></linearGradient><linearGradient id=\"df-bd\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#00e5c8\" stop-opacity=\"0.6\"/><stop offset=\"100%\" stop-color=\"#a855f7\" stop-opacity=\"0.6\"/></linearGradient><marker id=\"arr\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L8,3 z\" fill=\"#8b949e\"/></marker><style>.mf{font-family:'JetBrains Mono','Fira Code',monospace}</style></defs><rect width=\"600\" height=\"420\" fill=\"url(#df-bg)\" rx=\"12\"/><rect width=\"598\" height=\"418\" x=\"1\" y=\"1\" fill=\"none\" stroke=\"url(#df-bd)\" stroke-width=\"1\" rx=\"11\" opacity=\"0.5\"/><ellipse cx=\"300\" cy=\"52\" rx=\"60\" ry=\"22\" fill=\"#1a3c1a\" stroke=\"#56d364\" stroke-width=\"1.5\"/><text x=\"300\" y=\"57\" text-anchor=\"middle\" class=\"mf\" font-size=\"12\" fill=\"#56d364\">INICIO</text><line x1=\"300\" y1=\"74\" x2=\"300\" y2=\"102\" stroke=\"#8b949e\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/><rect x=\"218\" y=\"102\" width=\"164\" height=\"42\" rx=\"4\" fill=\"#0d2035\" stroke=\"#79c0ff\" stroke-width=\"1.5\"/><text x=\"300\" y=\"128\" text-anchor=\"middle\" class=\"mf\" font-size=\"11\" fill=\"#c9d1d9\">Leer archivo</text><line x1=\"300\" y1=\"144\" x2=\"300\" y2=\"172\" stroke=\"#8b949e\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/><polygon points=\"300,172 380,210 300,248 220,210\" fill=\"#2d1f40\" stroke=\"#d2a8ff\" stroke-width=\"1.5\"/><text x=\"300\" y=\"208\" text-anchor=\"middle\" class=\"mf\" font-size=\"11\" fill=\"#d2a8ff\">¿EOF?</text><line x1=\"380\" y1=\"210\" x2=\"460\" y2=\"210\" stroke=\"#8b949e\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/><text x=\"415\" y=\"204\" text-anchor=\"middle\" class=\"mf\" font-size=\"10\" fill=\"#56d364\">SÍ</text><rect x=\"460\" y=\"188\" width=\"100\" height=\"44\" rx=\"4\" fill=\"#1a3c1a\" stroke=\"#56d364\" stroke-width=\"1.5\"/><text x=\"510\" y=\"215\" text-anchor=\"middle\" class=\"mf\" font-size=\"11\" fill=\"#c9d1d9\">Imprimir</text><line x1=\"300\" y1=\"248\" x2=\"300\" y2=\"278\" stroke=\"#8b949e\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/><text x=\"315\" y=\"268\" class=\"mf\" font-size=\"10\" fill=\"#f85149\">NO</text><rect x=\"218\" y=\"278\" width=\"164\" height=\"42\" rx=\"4\" fill=\"#1a1000\" stroke=\"#ffa657\" stroke-width=\"1.5\"/><text x=\"300\" y=\"304\" text-anchor=\"middle\" class=\"mf\" font-size=\"11\" fill=\"#ffa657\">Procesar registro</text><line x1=\"218\" y1=\"299\" x2=\"140\" y2=\"299\" stroke=\"#8b949e\" stroke-width=\"1.5\"/><line x1=\"140\" y1=\"299\" x2=\"140\" y2=\"123\" stroke=\"#8b949e\" stroke-width=\"1.5\"/><line x1=\"140\" y1=\"123\" x2=\"218\" y2=\"123\" stroke=\"#8b949e\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/><line x1=\"510\" y1=\"232\" x2=\"510\" y2=\"360\" stroke=\"#8b949e\" stroke-width=\"1.5\"/><line x1=\"510\" y1=\"360\" x2=\"300\" y2=\"360\" stroke=\"#8b949e\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/><ellipse cx=\"300\" cy=\"382\" rx=\"60\" ry=\"22\" fill=\"#3c1515\" stroke=\"#f85149\" stroke-width=\"1.5\"/><text x=\"300\" y=\"387\" text-anchor=\"middle\" class=\"mf\" font-size=\"12\" fill=\"#f85149\">FIN</text><text x=\"576\" y=\"408\" text-anchor=\"end\" class=\"mf\" font-size=\"10\" fill=\"#64748b\">10 min lectura</text><text x=\"576\" y=\"394\" text-anchor=\"end\" class=\"mf\" font-size=\"10\" fill=\"#00e5c8\">Computación</text></svg>",
+  "vlabel": "// flujo · algoritmos · archivos secuenciales",
+  "title": "Diagramas de Flujo:",
+  "title_accent": "Del problema al algoritmo",
+  "excerpt": "Guía práctica para leer, trazar y evaluar diagramas de flujo. Los 6 símbolos, las 3 estructuras de control y 2 ejercicios reales con archivos secuenciales y VSAM.",
+  "toc": [
+    {
+      "id": "por-que-importan",
+      "label": "¿Por qué siguen importando?"
+    },
+    {
+      "id": "los-6-simbolos",
+      "label": "Los 6 símbolos estándar"
+    },
+    {
+      "id": "estructuras-control",
+      "label": "Las 3 estructuras de control"
+    },
+    {
+      "id": "patron-match",
+      "label": "El patrón MATCH"
+    },
+    {
+      "id": "ejercicio-6",
+      "label": "Ejercicio: MATCH + Actualización de Inventario"
+    },
+    {
+      "id": "ejercicio-7",
+      "label": "Ejercicio: Búsqueda por código de pantalla"
+    },
+    {
+      "id": "ejercicio-8",
+      "label": "Ejercicio: Morosidad con Validación de Fechas"
+    },
+    {
+      "id": "ejercicio-9",
+      "label": "Ejercicio: Suma de dos tiempos hh:mm:ss"
+    },
+    {
+      "id": "ejercicio-10",
+      "label": "Ejercicio: MATCH Saldos vs Pagos de Préstamos"
+    },
+    {
+      "id": "ejercicio-11",
+      "label": "Ejercicio: Alta de persona en archivo secuencial"
+    },
+    {
+      "id": "ejercicio-12",
+      "label": "Ejercicio: Alta de persona — variante (trampas distintas)"
+    },
+    {
+      "id": "ejercicio-13",
+      "label": "Ejercicio: Búsqueda por código desde base de datos"
+    },
+    {
+      "id": "ejercicio-14",
+      "label": "Ejercicio: Baja de persona en archivo secuencial"
+    },
+    {
+      "id": "ejercicio-15",
+      "label": "Ejercicio: MATCH Actualización de ARTICULOS con VENTAS"
+    },
+    {
+      "id": "ejercicio-16",
+      "label": "Ejercicio: Reporte dos cortes con acceso VSAM"
+    },
+    {
+      "id": "ejercicio-17",
+      "label": "Ejercicio: Imprimir Cheque Devoluciones (validación fecha + conversión importe)"
+    },
+    {
+      "id": "ejercicio-18",
+      "label": "Ejercicio: Separadores de miles en cadena numérica"
+    },
+    {
+      "id": "ejercicio-19",
+      "label": "Ejercicio 19 — Tabla de multiplicar"
+    },
+    {
+      "id": "checklist",
+      "label": "Checklist para evaluar un diagrama"
+    }
+  ],
+  "body": [
+    {
+      "type": "lede",
+      "text": "Hay una habilidad que ningún framework te va a enseñar: leer la lógica de un programa antes de escribir una sola línea de código. Los diagramas de flujo son esa habilidad. No son un relicto del pasado — son el lenguaje universal del algoritmo."
+    },
+    {
+      "type": "h2",
+      "id": "por-que-importan",
+      "n": "01",
+      "text": "¿Por qué siguen importando?"
+    },
+    {
+      "type": "p",
+      "text": "Cuando te enfrentas a un sistema de procesamiento por lotes — archivos maestros, movimientos, cortes de control — no hay Stack Overflow que te ayude. Necesitas entender el flujo. Un diagrama bien trazado te dice exactamente en qué orden se ejecutan las operaciones, qué pasa en cada condición y dónde pueden ocurrir errores."
+    },
+    {
+      "type": "callout",
+      "title": "💡 La regla de oro",
+      "text": "Antes de escribir código, dibuja el diagrama. Antes de evaluar un diagrama, lee el problema completo. El diagrama correcto es el que cumple <strong>todas</strong> las reglas del problema — no la mayoría."
+    },
+    {
+      "type": "h2",
+      "id": "los-6-simbolos",
+      "n": "02",
+      "text": "Los 6 símbolos estándar"
+    },
+    {
+      "type": "p",
+      "text": "Todo diagrama de flujo se construye con 6 formas básicas. No más. La claridad de un diagrama depende de usarlas correctamente:"
+    },
+    {
+      "type": "mermaid",
+      "num": "1",
+      "caption": "Los 6 símbolos estándar y cómo se relacionan entre sí",
+      "code": "flowchart LR\n    T([TERMINAL])\n    P[PROCESO]\n    D{DECISION}\n    IO[/ENTRADA-SALIDA/]\n    S[[SUBPROCESO]]\n    C((CONECTOR))\n    T --> P --> IO --> D\n    D -->|SI| S\n    D -->|NO| C"
+    },
+    {
+      "type": "p",
+      "text": "Reglas que nunca se rompen: solo un <strong>INICIO</strong>, uno o más <strong>FIN</strong>. El rombo siempre tiene <strong>exactamente dos salidas</strong>: Sí y No. El flujo general va de arriba hacia abajo y de izquierda a derecha. Evita flechas que se crucen — si se cruzan, el diagrama está mal diseñado."
+    },
+    {
+      "type": "h2",
+      "id": "estructuras-control",
+      "n": "03",
+      "text": "Las 3 estructuras de control"
+    },
+    {
+      "type": "p",
+      "text": "Cualquier algoritmo, por complejo que sea, se puede descomponer en tres estructuras. Estas son las mismas estructuras que usa tu código todos los días — el diagrama solo las hace visibles."
+    },
+    {
+      "type": "mermaid",
+      "num": "2",
+      "caption": "Secuencia: instrucciones una tras otra, sin bifurcaciones",
+      "code": "flowchart TD\n    A([INICIO])\n    B[/Leer dato A/]\n    C[/Leer dato B/]\n    D[resultado = A + B]\n    E[/Mostrar resultado/]\n    F([FIN])\n    A --> B --> C --> D --> E --> F"
+    },
+    {
+      "type": "mermaid",
+      "num": "3",
+      "caption": "Decisión (IF/ELSE): el rombo siempre tiene exactamente dos salidas",
+      "code": "flowchart TD\n    A([INICIO])\n    B[/Leer edad/]\n    C{edad >= 18?}\n    D[/Mostrar Mayor de edad/]\n    E[/Mostrar Menor de edad/]\n    F([FIN])\n    A --> B --> C\n    C -->|SI| D --> F\n    C -->|NO| E --> F"
+    },
+    {
+      "type": "mermaid",
+      "num": "4",
+      "caption": "Bucle WHILE: la condición se evalúa al inicio. La flecha de retorno sube hacia el rombo.",
+      "code": "flowchart TD\n    A([INICIO])\n    B[i = 0]\n    C{i < 5?}\n    D[/Mostrar i/]\n    E[i = i + 1]\n    F([FIN])\n    A --> B --> C\n    C -->|SI| D --> E --> C\n    C -->|NO| F"
+    },
+    {
+      "type": "h2",
+      "id": "patron-match",
+      "n": "04",
+      "text": "El patrón MATCH"
+    },
+    {
+      "type": "p",
+      "text": "El patrón MATCH es el más frecuente en procesamiento de archivos. Compara dos archivos secuenciales ordenados por la misma clave (número de cuenta, ID, etc.) y decide qué hacer en cada caso. La regla que lo define todo: <strong>solo avanzas el archivo que va \"atrasado\" en la comparación</strong>."
+    },
+    {
+      "type": "callout",
+      "title": "🔑 Las 3 reglas del MATCH",
+      "text": "<strong>= (iguales)</strong> → coincidencia: procesa el par y avanza <em>ambos</em> archivos.<br><strong>&lt; (maestro adelante)</strong> → el maestro no tiene movimiento: guarda sin cambios y avanza solo el <em>maestro</em>.<br><strong>&gt; (movimiento adelante)</strong> → movimiento sin cuenta: error o registro huérfano, avanza solo el archivo de <em>movimientos</em>."
+    },
+    {
+      "type": "h2",
+      "id": "ejercicio-6",
+      "n": "05",
+      "text": "Ejercicio: MATCH + Actualización de Inventario"
+    },
+    {
+      "type": "p",
+      "text": "Dado el archivo secuencial <strong>ARTICULOS.DAT</strong> (campos: NART, ARTICULO, PVP, STOCK, MINIMO) y el archivo de movimientos <strong>VENTAS.DAT</strong> (campos: NART2, VENTAS, TIPO), se debe actualizar el inventario generando un nuevo archivo de salida de artículos y un reporte de entradas y salidas. El campo <code>TIPO</code> define la operación: <code>0</code> = Venta (Stock <em>disminuye</em>) y <code>1</code> = Compra (Stock <em>aumenta</em>). Ambos archivos vienen clasificados por número de artículo."
+    },
+    {
+      "type": "callout",
+      "title": "🔍 ¿Por qué 20d y 21d están mal?",
+      "text": "<strong>Diagrama 20d:</strong> el rombo EOF tiene SÍ y NO intercambiados — cuando los archivos se terminan (EOF=SÍ) el programa sigue procesando registros, y cuando aún hay datos (EOF=NO) termina e imprime el reporte. El flujo está completamente invertido.<br><br><strong>Diagrama 21d:</strong> la condición del TIPO es <code>TIPO = 1</code> pero aplica las fórmulas al revés: cuando es compra (TIPO=1) resta el stock, y cuando es venta (TIPO=0) lo suma. Además intercambia qué archivo se lee en las ramas <code>&lt;</code> y <code>&gt;</code>."
+    },
+    {
+      "type": "mermaid",
+      "num": "9",
+      "caption": "Diagrama 19d correcto: MATCH ARTICULOS vs VENTAS con actualización de stock por TIPO",
+      "code": "flowchart TD\n    A([INICIO]) --> B[/Leer ARTICULOS\\nLeer VENTAS/]\n    B --> C{EOF ARTICULOS\\ny EOF VENTAS?}\n    C -->|SÍ| D[Imprime Reporte Compras\\nReporte Salidas]\n    D --> E[Cierra ARTICULOS]\n    E --> F([FIN])\n    C -->|NO| G{MATCH:\\nARTICULOS.NART\\nvs VENTAS.NART2}\n    G -->|= Match| H{¿TIPO = 0?\\nVenta}\n    H -->|NO - Compra\\nTIPO=1| I[Stock = Stock + Ventas]\n    I --> J[Guardar Detalle\\nen Reporte de Compras]\n    H -->|SÍ - Venta\\nTIPO=0| K[Stock = Stock - Ventas]\n    K --> L[Guardar Detalle\\nen Reporte de Salida]\n    J --> M[Guardar en\\nArchivo nuevo ARTICULOS]\n    L --> M\n    M --> N[/Leer ARTICULOS\\nLeer VENTAS/]\n    N --> C\n    G -->|< Sin movimiento| O[No hubo ningún\\nmovimiento en el artículo]\n    O --> P[Guardar Detalle\\nen nuevo ARTICULOS]\n    P --> Q[/Leer ARTICULOS/]\n    Q --> C\n    G -->|> Venta sin artículo| R[Error: no hay ningún\\nartículo con ese número]\n    R --> S[/Leer VENTAS/]\n    S --> C\n    style A fill:#1a3c1a,stroke:#56d364,color:#56d364\n    style F fill:#3c1515,stroke:#f85149,color:#f85149\n    style C fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style G fill:#2d1500,stroke:#ffa657,color:#ffa657\n    style H fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style R fill:#2d0f0f,stroke:#f85149,color:#f85149\n    style M fill:#1a3c1a,stroke:#56d364,color:#c9d1d9"
+    },
+    {
+      "type": "h2",
+      "id": "ejercicio-7",
+      "n": "06",
+      "text": "Ejercicio: Búsqueda por código de pantalla"
+    },
+    {
+      "type": "p",
+      "text": "El usuario ingresa un <strong>código por pantalla</strong>. El programa recorre la base de datos completa comparando cada registro con ese código. Por cada coincidencia imprime el registro y acumula un contador. Al llegar al EOF imprime el total de registros encontrados."
+    },
+    {
+      "type": "callout",
+      "title": "🔍 ¿Por qué 20 y 22 están mal?",
+      "text": "<strong>Diagrama 20:</strong> cuando un registro coincide (<code>regsitro b=b</code> = SÍ) solo incrementa n y avanza a la siguiente lectura — no imprime el registro encontrado en ese momento. Incumple el requisito 1: imprimir registros encontrados.<br><br><strong>Diagrama 22:</strong> EOF tiene YES y NO intercambiados — cuando el archivo termina (EOF=YES) sigue procesando registros, y cuando aún hay datos (EOF=NO) imprime el reporte y termina. El flujo es el inverso del correcto."
+    },
+    {
+      "type": "mermaid",
+      "num": "10",
+      "caption": "Diagrama 21 correcto: búsqueda secuencial por código ingresado por pantalla",
+      "code": "flowchart TD\n    A([inicio]) --> B[/lectura: código por pantalla/]\n    B --> C[\"a_codi = b_codi\"]\n    C --> D{eof}\n    D -->|Yes - fin de archivo| E[\"Imprimir datos y n registros\"]\n    E --> F([fin])\n    D -->|No - hay registros| G{\"¿registro coincide\\ncon b_codi?\"}\n    G -->|\"Sí - encontrado\"| H[regsitros: imprimir registro]\n    H --> I[\"n + 1\"]\n    I --> D\n    G -->|\"No - no coincide\"| D\n    style A fill:#1a3c1a,stroke:#56d364,color:#56d364\n    style F fill:#3c1515,stroke:#f85149,color:#f85149\n    style D fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style G fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style E fill:#0d2035,stroke:#79c0ff,color:#c9d1d9\n    style H fill:#1a3c1a,stroke:#56d364,color:#c9d1d9\n    style I fill:#1a2a1a,stroke:#56d364,color:#56d364"
+    },
+    {
+      "type": "h2",
+      "id": "ejercicio-8",
+      "n": "07",
+      "text": "Ejercicio: Morosidad con Validación de Fechas"
+    },
+    {
+      "type": "p",
+      "text": "Un programa batch lee el archivo secuencial <strong>SALDOS</strong> y un parámetro <code>FECHA BASE (DD/MM/AAAA)</code>. Por cada registro calcula cuántos días han pasado desde la <strong>fecha último pago</strong> hasta la fecha base. Si el retraso es de 61 a 90 días imprime el campo <em>Observaciones</em> como <code>MEDIA</code>; si es mayor de 90 días lo imprime como <code>ALTA</code>; si es menor o igual a 60 días no se imprime nada. La fecha base debe validarse incluyendo correctamente los años bisiestos antes de calcular."
+    },
+    {
+      "type": "callout",
+      "title": "🔍 ¿Por qué 16 y 17 están mal?",
+      "text": "<strong>Diagrama 16:</strong> la condición de morosidad está invertida — usa <code>DiasT &gt; 60 y DiasT &gt; 90</code> para imprimir MEDIA cuando en realidad ese rango (más de 90 días) corresponde a ALTA. Además la fórmula del caso base es <code>DiasT = DiasB − DiasT</code> en lugar de <code>DiasB − DiaU</code>, lo que produce un resultado incorrecto desde el primer registro.<br><br><strong>Diagrama 17:</strong> el orden de inicialización es incorrecto — lee el primer registro de SALDOS <em>antes</em> de leer la fecha parámetro, cuando el parámetro debe cargarse primero. La validación de año bisiesto solo verifica <code>Año%4 = 0</code> sin la excepción de siglos: un año como 1900 (divisible por 100 pero no por 400) sería erróneamente clasificado como bisiesto y febrero tendría 29 días en lugar de 28."
+    },
+    {
+      "type": "mermaid",
+      "num": "11",
+      "caption": "Diagrama 18 correcto: flujo principal — parámetro antes del ciclo, morosidad con rangos precisos",
+      "code": "flowchart TD\n    A([Inicio]) --> B[\"Abrir Archivo Saldos\\nInicializar variables\\nLeer fecha parámetro\"]\n    B --> C[/Leer saldos/]\n    C --> D{EOF}\n    D -->|SÍ| E[Cerrar Archivos]\n    E --> F([Fin])\n    D -->|NO| G[[Validar Fechas]]\n    G --> H[[Calcular días\\nde morosidad]]\n    H --> I{DiasT <= 60}\n    I -->|SÍ\\nsin mora| C\n    I -->|NO| J{\"DiasT >= 61\\ny DiasT <= 90\"}\n    J -->|SÍ| K[/Imprimir\\nMorosidad Media/]\n    J -->|NO\\nDiasT > 90| L[/Imprimir\\nMorosidad Alta/]\n    K --> C\n    L --> C\n    style A fill:#1a3c1a,stroke:#56d364,color:#56d364\n    style F fill:#3c1515,stroke:#f85149,color:#f85149\n    style D fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style I fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style J fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style K fill:#0d2035,stroke:#79c0ff,color:#c9d1d9\n    style L fill:#2d1500,stroke:#ffa657,color:#ffa657"
+    },
+    {
+      "type": "mermaid",
+      "num": "12",
+      "caption": "Subproceso Evalua mes: único diagrama que aplica la regla completa del año bisiesto (excepción de siglos)",
+      "code": "flowchart TD\n    A([Evalua mes]) --> B{Mes = 2}\n    B -->|SÍ| C{Año % 4 = 0}\n    C -->|SÍ| D{\"Año%100 ≠ 0\\nOR Año%400 = 0\"}\n    D -->|SÍ\\nAño bisiesto| E[DiasM = 29]\n    D -->|NO\\nSiglo no bisiesto| F[DiasM = 28]\n    C -->|NO| F\n    B -->|NO| G{\"Mes = 4, 6,\\n9 o 11\"}\n    G -->|SÍ| H[DiasM = 30]\n    G -->|NO| I[DiasM = 31]\n    E --> J([Fin])\n    F --> J\n    H --> J\n    I --> J\n    style A fill:#1a3c1a,stroke:#56d364,color:#56d364\n    style J fill:#3c1515,stroke:#f85149,color:#f85149\n    style B fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style C fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style D fill:#2d1500,stroke:#ffa657,color:#ffa657\n    style E fill:#1a3c1a,stroke:#56d364,color:#c9d1d9\n    style F fill:#3c1515,stroke:#f85149,color:#c9d1d9"
+    },
+    {
+      "type": "h2",
+      "id": "ejercicio-9",
+      "n": "08",
+      "text": "Ejercicio: Suma de dos tiempos hh:mm:ss"
+    },
+    {
+      "type": "p",
+      "text": "El usuario ingresa por pantalla <strong>dos tiempos</strong> en formato <code>hh:mm:ss</code>. El programa debe sumarlos y mostrar el resultado también en <code>hh:mm:ss</code>, propagando correctamente el <strong>acarreo</strong>: si los segundos suman 60 o más se lleva 1 minuto extra; si los minutos suman 60 o más se lleva 1 hora extra."
+    },
+    {
+      "type": "callout",
+      "title": "🔍 ¿Por qué 82 y 83 están mal?",
+      "text": "<strong>Diagrama 82:</strong> calcula <code>ma</code> y <code>ha</code> correctamente (= 1), pero nunca los usa. Las fórmulas son <code>suma_min = mmh1 + mmh2</code> y <code>suma_hr = hh1 + hh2</code> — sin sumar el acarreo correspondiente. Si los segundos desbordan, ese minuto extra desaparece; si los minutos desbordan, esa hora extra también se pierde.<br><br><strong>Diagrama 83:</strong> sí incluye el acarreo en las fórmulas (<code>suma_min + ma</code>, <code>suma_hr + ha</code>), pero los valores de acarreo son absurdos: <code>ma = 59</code> y <code>ha = 12</code>. Un desbordamiento de segundos no aporta 59 minutos extra — aporta exactamente 1."
+    },
+    {
+      "type": "mermaid",
+      "num": "13",
+      "caption": "Diagrama 84 correcto: acarreo ma = 1 y ha = 1, ambas fórmulas acumulan el carry",
+      "code": "flowchart TD\n    A([Inicio]) --> B[\"h1 = hh:mm:ss\\nh2 = hh:mm:ss\\nma = 0 · ha = 0\\nsuma_seg, suma_min, suma_hr\"]\n    B --> C[/Dame la primera hora\\nen formato hh:mm:ss/]\n    C --> D[/Dame la segunda hora\\nen formato hh:mm:ss/]\n    D --> E[\"suma_seg = ssh1 + ssh2\"]\n    E --> F{suma_seg > 60}\n    F -->|SÍ| G[\"suma_seg = suma_seg - 60\"]\n    G --> H[\"ma = 1\"]\n    H --> I[\"suma_min = mmh1 + mmh2 + ma\"]\n    F -->|NO| I\n    I --> J{suma_min > 60}\n    J -->|SÍ| K[\"suma_min = suma_min - 60\"]\n    K --> L[\"ha = 1\"]\n    L --> M[\"suma_hr = hh1 + hh2 + ha\"]\n    J -->|NO| M\n    M --> N[/Imprime\\nsuma_hr:suma_min:suma_seg/]\n    N --> O([Fin])\n    style A fill:#1a3c1a,stroke:#56d364,color:#56d364\n    style O fill:#3c1515,stroke:#f85149,color:#f85149\n    style F fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style J fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style H fill:#0d2035,stroke:#79c0ff,color:#79c0ff\n    style L fill:#0d2035,stroke:#79c0ff,color:#79c0ff\n    style N fill:#1a3c1a,stroke:#56d364,color:#c9d1d9"
+    },
+    {
+      "type": "h2",
+      "id": "ejercicio-10",
+      "n": "09",
+      "text": "Ejercicio: MATCH Saldos vs Pagos de Préstamos"
+    },
+    {
+      "type": "p",
+      "text": "Dados el archivo maestro <strong>SALDOS DE PRÉSTAMOS</strong> (campos: Número de Cuenta, Estado del Préstamo, Saldo, Fecha de Último Pago) y el archivo de movimientos <strong>PAGOS PRÉSTAMOS</strong> (campos: Número de Cuenta, Importe del Pago, Fecha de Operación), ambos clasificados por Número de Cuenta, se debe generar un nuevo archivo <strong>ARCHIVOS DE SALDOS ACTUALIZADOS</strong>. La regla de negocio: si hay MATCH, <code>Saldo = Saldo − Importe_pago</code> y se actualiza la Fecha. Si SALDOS va adelante (sin pago) se graba sin cambios. Si PAGOS va adelante (pago sin cuenta) se emite error."
+    },
+    {
+      "type": "callout",
+      "title": "🔍 ¿Por qué 8 y 9 están mal?",
+      "text": "<strong>Diagrama 8:</strong> viola la regla de oro del MATCH — en la rama <code>&gt;</code> (pago sin cuenta) lee <em>SALDOS y PAGOS</em> en lugar de solo PAGOS; y en la rama <code>&lt;</code> (saldo sin pago) también lee <em>SALDOS y PAGOS</em> en lugar de solo SALDOS. Avanzar ambos archivos cuando hay desigualdad rompe la sincronización y pierde registros.<br><br><strong>Diagrama 9:</strong> tres errores simultáneos: (1) el orden inicial está invertido — lee PAGOS antes que SALDOS; (2) la rama <code>&gt;</code> lee Saldos en lugar de PAGOS; (3) las ramas <code>&lt;</code> y <code>=</code> están intercambiadas — aplica la actualización de saldo donde debería solo guardar sin cambios, y guarda sin cambios donde debería actualizar."
+    },
+    {
+      "type": "mermaid",
+      "num": "14",
+      "caption": "Diagrama 7 correcto: cada rama del MATCH avanza únicamente el archivo que va atrasado",
+      "code": "flowchart TD\n    A([Inicio]) --> B[\"Abrir Archivo SALDO DE PRESTAMOS\\nPAGOS PRESTAMOS\"]\n    B --> C[/Leer SALDOS/]\n    C --> D[/Leer PAGOS/]\n    D --> E{EOF SALDOS\\ny PAGOS}\n    E -->|SÍ| F([Fin])\n    E -->|NO| G{MATCH\\nSALDOS, PAGOS}\n    G -->|\"> Pago sin cuenta\"| H[ERROR\\nPago a cuenta\\ninexistente]\n    H --> I[/Leer PAGOS/]\n    I --> E\n    G -->|\"= Match\"| J[\"Saldo = Saldo − Importe_pago\\nFecha = Fecha de último pago\"]\n    J --> K[\"Guardar: Nro Cuenta, Estado\\nSaldo, Fecha\\nEn SALDOS ACTUALIZADOS\"]\n    K --> L[/Leer SALDOS\\ny PAGOS/]\n    L --> E\n    G -->|\"< Sin pago\"| M[\"Guardar: Nro Cuenta, Estado\\nSaldo, Fecha\\nEn SALDOS ACTUALIZADOS\"]\n    M --> N[/Leer SALDOS/]\n    N --> E\n    style A fill:#1a3c1a,stroke:#56d364,color:#56d364\n    style F fill:#3c1515,stroke:#f85149,color:#f85149\n    style E fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style G fill:#2d1500,stroke:#ffa657,color:#ffa657\n    style H fill:#2d0f0f,stroke:#f85149,color:#f85149\n    style J fill:#0d2035,stroke:#79c0ff,color:#c9d1d9\n    style K fill:#1a3c1a,stroke:#56d364,color:#c9d1d9\n    style M fill:#1a2a1a,stroke:#56d364,color:#c9d1d9"
+    },
+    {
+      "type": "h2",
+      "id": "ejercicio-11",
+      "n": "10",
+      "text": "Ejercicio: Alta de persona en archivo secuencial"
+    },
+    {
+      "type": "p",
+      "text": "Programa en línea (pantalla) que da de <strong>alta</strong> los datos de una persona en el archivo <strong>DATOS.DAT</strong>. Antes de grabar debe recorrer el archivo completo para validar que la persona <em>no exista</em> ya. Campos de pantalla: <code>P_ID, P_NOM, P_APE, P_DIR</code>. Al terminar, preguntar si se desea realizar una nueva alta."
+    },
+    {
+      "type": "callout",
+      "title": "🔍 ¿Por qué 11 y 12 están mal?",
+      "text": "<strong>Diagrama 11:</strong> la validación de duplicados solo compara <code>P_ID = A_ID</code> — un solo campo. El problema exige validar que la persona no exista, lo que requiere comparar tanto ID como nombre (<code>P_ID = A_ID Y P_NOM = A_NOM</code>). Con una sola clave, un homónimo con diferente ID pasaría sin problemas pero alguien con el mismo ID y distinto nombre sería rechazado erróneamente.<br><br><strong>Diagrama 12:</strong> las ramas del EOF están completamente invertidas. Cuando aún hay registros por leer (<code>EOF = NO</code>) el diagrama guarda inmediatamente sin terminar de buscar duplicados — es posible registrar a alguien que ya existe. Cuando el archivo se agota (<code>EOF = SÍ</code>) intenta seguir comparando registros que ya no existen."
+    },
+    {
+      "type": "mermaid",
+      "num": "15",
+      "caption": "Diagrama 10 correcto: recorre el archivo completo antes de grabar, valida con ID y nombre",
+      "code": "flowchart TD\n    A([Inicio]) --> B\n    R -->|SÍ| B\n    B[/Pedir datos:\\nP_ID, P_NOM, P_APE, P_DIR/] --> C[/Lee Datos/]\n    C --> D{EOF}\n    D -->|SÍ - sin duplicado| E[\"Guardar en archivo\\nP_ID, P_NOM\\nP_APE, P_DIR\"]\n    E --> R{Hacer nueva\\nalta}\n    R -->|NO| F([Fin])\n    D -->|NO| G{\"P_ID = A_ID\\nY\\nP_NOM = A_NOM\"}\n    G -->|SÍ - duplicado| H[Ya existe un\\nregistro de la persona]\n    H --> R\n    G -->|NO - sigue buscando| C\n    style A fill:#1a3c1a,stroke:#56d364,color:#56d364\n    style F fill:#3c1515,stroke:#f85149,color:#f85149\n    style D fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style G fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style R fill:#2d1500,stroke:#ffa657,color:#ffa657\n    style E fill:#1a3c1a,stroke:#56d364,color:#c9d1d9\n    style H fill:#2d0f0f,stroke:#f85149,color:#f85149"
+    },
+    {
+      "type": "h2",
+      "id": "ejercicio-12",
+      "n": "11",
+      "text": "Alta de persona — variante (trampas distintas)"
+    },
+    {
+      "type": "p",
+      "text": "El enunciado es <strong>idéntico</strong> al ejercicio anterior: alta en DATOS.DAT, mismos campos, misma lógica. Lo que cambia son las trampas en los diagramas incorrectos. El examen reutiliza el mismo problema con errores diferentes para ver si realmente entiendes el flujo o solo memorizaste una respuesta."
+    },
+    {
+      "type": "callout",
+      "title": "⚠️ Las trampas nuevas en esta variante",
+      "text": "<strong>Diagrama 5 — trampa en el loop de nueva alta:</strong> cuando el usuario responde SÍ a <em>Hacer nueva alta</em>, el flujo regresa a <code>Lee Datos</code> en lugar de <code>Dame los datos de la persona</code>. El programa jamás pide los datos del nuevo registro — intenta dar de alta a la misma persona sin capturar nada. Además solo valida <code>P_ID = A_ID</code> (un campo), ignorando el nombre.<br><br><strong>Diagrama 6 — doble inversión:</strong> EOF y la condición de duplicado están <em>ambos</em> invertidos a la vez. EOF=No guarda sin terminar de buscar duplicados. EOF=Sí intenta comparar cuando ya no hay registros. Y encima, cuando la comparación da <em>No coincide</em> muestra 'Ya existe' — el resultado de la validación es exactamente al revés. Dos errores combinados hacen más difícil detectar cuál rompe el flujo primero."
+    },
+    {
+      "type": "mermaid",
+      "num": "16",
+      "caption": "Diagrama 4 correcto — mismo patrón que el ejercicio anterior, distintas trampas en los incorrectos",
+      "code": "flowchart TD\n    A([Inicio]) --> B\n    R -->|SÍ| B\n    B[/Dame los datos:\\nP_ID, P_NOM, P_APE, P_DIR/] --> C[/Lee Datos/]\n    C --> D{EOF}\n    D -->|SÍ - sin duplicado| E[\"Guardar en archivo\\nP_ID, P_NOM\\nP_APE, P_DIR\"]\n    E --> R{Hacer nueva\\nalta}\n    R -->|NO| F([Fin])\n    D -->|NO| G{\"P_ID = A_ID\\nY\\nP_NOM = A_NOM\"}\n    G -->|SÍ - duplicado| H[Ya existe un\\nregistro de la persona]\n    H --> R\n    G -->|NO - sigue buscando| C\n    style A fill:#1a3c1a,stroke:#56d364,color:#56d364\n    style F fill:#3c1515,stroke:#f85149,color:#f85149\n    style D fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style G fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style R fill:#2d1500,stroke:#ffa657,color:#ffa657\n    style E fill:#1a3c1a,stroke:#56d364,color:#c9d1d9\n    style H fill:#2d0f0f,stroke:#f85149,color:#f85149"
+    },
+    {
+      "type": "h2",
+      "id": "ejercicio-13",
+      "n": "12",
+      "text": "Ejercicio: Búsqueda por código desde base de datos"
+    },
+    {
+      "type": "p",
+      "text": "Variante del patrón de búsqueda secuencial: en lugar de recibir el código por pantalla (captura de usuario), el programa lo <strong>lee directamente desde un archivo de base de datos</strong> (COLONIAS). Recorre todos los registros comparando <code>a_codi = b_codi</code>, acumula coincidencias en <code>n</code> e imprime los datos al llegar al EOF."
+    },
+    {
+      "type": "callout",
+      "title": "🔍 ¿Por qué A y C están mal?",
+      "text": "<strong>Diagrama A:</strong> en la rama <code>EOF = No</code> procesa el registro y hace <code>n+1</code>, pero <strong>nunca lee el siguiente registro</strong>. El flujo regresa al rombo EOF con el mismo dato en memoria → bucle infinito. Además no verifica si el registro coincide con el código buscado antes de contarlo.<br><br><strong>Diagrama C:</strong> cae en el error clásico de EOF invertido: cuando <code>EOF = No</code> (aún hay registros por leer) imprime el reporte y termina; cuando <code>EOF = Yes</code> (archivo agotado) intenta procesar y leer registros que ya no existen. El comportamiento es exactamente el contrario al correcto."
+    },
+    {
+      "type": "mermaid",
+      "num": "17",
+      "caption": "Diagrama B correcto: verifica coincidencia en cada registro, lee el siguiente antes de volver al EOF",
+      "code": "flowchart TD\n    A([inicio]) --> B[/lectura/]\n    B --> C[\"a_codi = b_codi\"]\n    C --> D{eof}\n    D -->|Yes| E[\"imprimir datos y n registros\"]\n    E --> F([fin])\n    D -->|No| G{\"registro b = b\\n¿coincide?\"}\n    G -->|Sí| H[\"n + 1\"]\n    H --> I[/lectura/]\n    I --> D\n    G -->|No| I\n    style A fill:#1a3c1a,stroke:#56d364,color:#56d364\n    style F fill:#3c1515,stroke:#f85149,color:#f85149\n    style D fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style G fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style E fill:#0d2035,stroke:#79c0ff,color:#c9d1d9\n    style H fill:#1a3c1a,stroke:#56d364,color:#56d364"
+    },
+    {
+      "type": "h2",
+      "id": "ejercicio-14",
+      "n": "13",
+      "text": "Ejercicio: Baja de persona en archivo secuencial"
+    },
+    {
+      "type": "p",
+      "text": "Operación inversa al Alta: dado un ID y nombre recibidos desde pantalla, el programa recorre el archivo DATOS.DAT registro a registro hasta encontrar la coincidencia y eliminarla. Si se llega al EOF sin encontrarla, se reporta que la persona no existe. Al finalizar se pregunta si se desea realizar otra baja."
+    },
+    {
+      "type": "callout",
+      "title": "⚠️ Los errores de D7 y D8",
+      "text": "<strong>Diagrama 7 — comparación invertida:</strong> la condición <code>P_ID = A_ID Y P_Nombre = A_Nombre</code> tiene los ramos Sí/No intercambiados. Cuando NO coincide elimina el registro; cuando SÍ coincide avanza a leer el siguiente. El efecto: elimina todos los registros que <em>no</em> son el buscado y conserva exactamente el que debería borrar.<br><br><strong>Diagrama 8 — loop exterior mal conectado:</strong> la comparación y el bloque de eliminación están correctos, pero al responder SÍ a <em>Realizar una nueva baja</em> el flujo regresa directamente a <code>Lee Archivo Datos</code> en lugar de volver a <code>Dame el nombre de la persona y su ID</code>. Nunca vuelve a capturar datos de pantalla — la segunda iteración reutiliza los mismos valores sin preguntar qué persona se desea dar de baja."
+    },
+    {
+      "type": "mermaid",
+      "num": "18",
+      "caption": "Diagrama 9 correcto — Sí→Eliminar, No→sigue leyendo, loop exterior regresa a pedir datos de pantalla",
+      "code": "flowchart TD\n    A([Inicio]) --> B[\"Declarar: P_ID, P_Nom\\nA_ID, A_Nom\"]\n    B --> C\n    R{Realizar una\\nnueva baja} -->|SÍ| C\n    C[/Dame el nombre\\nde la persona y su ID/] --> D[/Lee Archivo Datos\\nA_ID, A_Nombre/]\n    D --> E{EOF}\n    E -->|SÍ| F[No existe la\\npersona indicada]\n    F --> R\n    E -->|NO| G{\"P_ID = A_ID\\nY\\nP_Nom = A_Nom\"}\n    G -->|NO - sigue buscando| H[/Lee Datos/]\n    H --> E\n    G -->|SÍ - encontrado| I[Eliminar registro]\n    I --> R\n    R -->|NO| J([Fin])\n    style A fill:#1a3c1a,stroke:#56d364,color:#56d364\n    style J fill:#3c1515,stroke:#f85149,color:#f85149\n    style E fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style G fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style R fill:#2d1500,stroke:#ffa657,color:#ffa657\n    style I fill:#1a3c1a,stroke:#56d364,color:#c9d1d9\n    style F fill:#2d0f0f,stroke:#f85149,color:#f85149"
+    },
+    {
+      "type": "h2",
+      "id": "ejercicio-15",
+      "n": "14",
+      "text": "Ejercicio: MATCH Actualización de ARTICULOS con VENTAS"
+    },
+    {
+      "type": "p",
+      "text": "Clásico ejercicio MATCH entre dos archivos ordenados por NART (número de artículo): ARTICULOS.DAT (maestro) y VENTAS.DAT (movimientos). El campo TIPO indica si el movimiento es una compra (stock entra) o una salida (stock sale). Al finalizar ambos archivos se imprimen los reportes y se cierra el nuevo maestro."
+    },
+    {
+      "type": "callout",
+      "title": "⚠️ Los errores de D20 y D21",
+      "text": "<strong>Diagrama 20 — doble error:</strong> primero, el EOF está <em>invertido</em>: cuando <code>EOF=No</code> (aún hay registros) imprime los reportes y termina; cuando <code>EOF=Sí</code> (archivos agotados) intenta procesar registros que ya no existen. Segundo, las ramas <code>&lt;</code> y <code>&gt;</code> del MATCH están <em>intercambiadas</em>: la rama menor recibe el mensaje de error y avanza VENTAS, y la rama mayor trata el artículo como sin movimiento y avanza ARTICULOS — exactamente al revés.<br><br><strong>Diagrama 21 — archivo equivocado en cada rama MATCH:</strong> la condición del MATCH y los mensajes son correctos, pero el archivo que se lee después no lo es. Cuando <code>NART &lt; NART.VENTAS</code> (sin movimiento, debe avanzar ARTICULOS) D21 lee VENTAS. Cuando <code>NART &gt; NART.VENTAS</code> (venta sin artículo, debe avanzar VENTAS) D21 lee ARTICULOS. Texto correcto, acción incorrecta."
+    },
+    {
+      "type": "mermaid",
+      "num": "19",
+      "caption": "Diagrama 19 correcto — EOF→Sí imprime y cierra; MATCH: menor=Lee ARTICULOS, mayor=Lee VENTAS, igual=procesa Tipo",
+      "code": "flowchart TD\n    A([Inicio]) --> B[/Lee ARTICULOS\\nLee VENTAS/]\n    B --> C{EOF ARTICULOS\\nY EOF VENTAS}\n    C -->|SI| D[Imprime Reporte\\nCompras + Salidas]\n    D --> E[Cierra ARTICULOS] --> F([Fin])\n    C -->|NO| G{NART vs\\nNART.VENTAS}\n    G -->|igual| H{Tipo = 0}\n    H -->|SI compra| I[Stock = Stock + Ventas]\n    I --> J[Guardar Detalle\\nReporte Compras]\n    J --> K[Guardar en nuevo\\nARTICULOS]\n    K --> L[/Lee ARTICULOS\\nLee VENTAS/]\n    L --> C\n    H -->|NO salida| M[Stock = Stock - Ventas]\n    M --> N[Guardar Detalle\\nReporte Salidas]\n    N --> K\n    G -->|menor sin movimiento| O[No hubo ningun\\nmovimiento en articulo]\n    O --> P[Guardar Detalle\\nnuevo ARTICULOS]\n    P --> Q[/Lee ARTICULOS/]\n    Q --> C\n    G -->|mayor sin articulo| R[Error no hay\\narticulo con ese numero]\n    R --> S[/Lee VENTAS/]\n    S --> C\n    style A fill:#1a3c1a,stroke:#56d364,color:#56d364\n    style F fill:#3c1515,stroke:#f85149,color:#f85149\n    style C fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style G fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style H fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style I fill:#0d2035,stroke:#79c0ff,color:#c9d1d9\n    style M fill:#1a1000,stroke:#ffa657,color:#ffa657\n    style R fill:#2d0f0f,stroke:#f85149,color:#f85149"
+    },
+    {
+      "type": "h2",
+      "id": "ejercicio-16",
+      "n": "15",
+      "text": "Ejercicio: Reporte dos cortes de control con acceso VSAM"
+    },
+    {
+      "type": "p",
+      "text": "El ejercicio más complejo del laboratorio: generar un reporte con <strong>dos cortes de control</strong> (División y Sucursal) sobre MAESTRO.EMPRESAS (secuencial, clasificado por División+Sucursal), enriqueciendo los encabezados con datos del <strong>CATÁLOGO DE CÓDIGOS en VSAM acceso directo</strong>. Solo se imprimen registros con Saldo &gt; 25,000. Las variables clave son <code>Div_ant</code>/<code>Div_lei</code> y <code>Suc_ant</code>/<code>Suc_lei</code> para detectar los cortes, más <code>Sub_div</code> y <code>Sub_suc</code> como acumuladores."
+    },
+    {
+      "type": "callout",
+      "title": "⚠️ Los errores de D22 y D24",
+      "text": "<strong>Diagrama 22 — VSAM incorrecto en el Corte División:</strong> cuando cambia la División, el programa debe consultar VSAM con la clave <code>DV + No.División</code> para obtener los datos de encabezado de División. D22 llama a <code>VSAM SUCURSAL</code> (clave <code>SC + Sucursal</code>) en su lugar. El corte de División imprime datos de Sucursal — información completamente distinta a la requerida.<br><br><strong>Diagrama 24 — variables de control actualizadas demasiado pronto:</strong> al final de cada registro de detalle, D24 hace <code>Div_ant=Div_lei</code> y <code>Suc_ant=Suc_lei</code>. Esto iguala las variables anteriores a las actuales después de cada impresión, de modo que en la siguiente iteración <code>Div_ant</code> y <code>Suc_ant</code> siempre coinciden con <code>Div_lei</code> y <code>Suc_lei</code>. Los cortes de control nunca se detectan y el reporte nunca imprime subtotales de División ni de Sucursal."
+    },
+    {
+      "type": "mermaid",
+      "num": "20",
+      "caption": "Diagrama 23 correcto — Div_ant solo se actualiza en Corte División; VSAM SC para sucursal, DV para división",
+      "code": "flowchart TD\n    A([Inicio]) --> B[Abrir MAESTRO\\ny CATALOGO]\n    B --> C[Inicializar\\nSub_div=0 Sub_suc=0]\n    C --> D[/Leer MAESTRO/]\n    D --> E[Div_ant=Div_lei\\nSuc_ant=Suc_lei]\n    E --> F{EOF}\n    F -->|SI| G[Imprime Sub_div\\ny Sub_suc]\n    G --> H([Fin])\n    F -->|NO| I{Div_ant\\n= Div_lei}\n    I -->|SI misma division| J[Procesar Sucursal]\n    I -->|NO cambio division| K[Corte Division]\n    J --> L{Suc_ant\\n= Suc_lei}\n    L -->|NO cambio sucursal| M[VSAM SUCURSAL\\nSC + No.Suc]\n    M --> N[Imprime Codigo\\nSucursal Nombre\\nDireccion Sub_suc]\n    N --> O[Sub_suc=0\\nSuc_ant=Suc_lei]\n    O --> P{Saldo > 25000}\n    L -->|SI misma sucursal| P\n    P -->|NO| Q[/Leer MAESTRO/]\n    Q --> F\n    P -->|SI| R[Sub_div += Saldo\\nSub_suc += Saldo]\n    R --> S[Imprime Division\\nSucursal No.Cuenta\\nFecha Alta Saldo]\n    S --> Q\n    K --> T[VSAM DIVISION\\nDV + No.Div]\n    T --> U[Imprime Codigo\\nDivision Nombre\\nDireccion Sub_div]\n    U --> V[Sub_div=0\\nDiv_ant=Div_lei]\n    V --> F\n    style A fill:#1a3c1a,stroke:#56d364,color:#56d364\n    style H fill:#3c1515,stroke:#f85149,color:#f85149\n    style F fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style I fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style L fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style P fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style M fill:#0d2035,stroke:#79c0ff,color:#c9d1d9\n    style T fill:#0d2035,stroke:#79c0ff,color:#c9d1d9\n    style K fill:#1a1000,stroke:#ffa657,color:#ffa657\n    style J fill:#1a1000,stroke:#ffa657,color:#ffa657"
+    },
+    {
+      "type": "h2",
+      "id": "ejercicio-17",
+      "n": "16",
+      "text": "Ejercicio: Imprimir Cheque Devoluciones"
+    },
+    {
+      "type": "p",
+      "text": "El ejercicio más completo del laboratorio: procesamiento por lotes sobre el archivo DEVOLUCIONES para imprimir cheques de reembolso. Requiere <strong>validar la fecha base</strong> (parámetro dd/mm/aa, incluyendo regla de año bisiesto), <strong>convertir el importe a letra</strong> (módulo Convierte Importe con submódulos Centena, Decena y Unidad), y acumular totales separados por tipo de persona Física (<code>Tot_F</code>) y Moral (<code>Tot_M</code>)."
+    },
+    {
+      "type": "callout",
+      "title": "⚠️ Los errores de D28a y D30a",
+      "text": "<strong>Diagrama 28a — imprime antes de verificar EOF y antes de convertir:</strong> en el loop, el bloque <em>Imprimir REPORTE a cheque</em> aparece <em>antes</em> del check EOF. Si el registro leído es el último, sus datos ya fueron impresos antes de detectar que no hay más registros. Además, <code>Convierte Importe</code> ocurre al <em>final</em> del loop, por lo que <code>Importe Letra</code> todavía no existe cuando se imprime el cheque. El orden correcto es: Leer → EOF → Acumular → Imprimir → Convertir.<br><br><strong>Diagrama 30a — fórmula de año bisiesto incorrecta:</strong> la condición secundaria usa <code>Año%100=0 Y Año%400=0</code> (AND lógico). Esto solo marca como bisiestos los años divisibles por 400. Años como 1996, 2004 o 2024 — divisibles por 4 pero no por 100 — son correctamente bisiestos pero D30a los clasifica como años de 365 días. La fórmula correcta es <code>(Año%4=0 AND Año%100≠0) OR Año%400=0</code>."
+    },
+    {
+      "type": "mermaid",
+      "num": "21",
+      "caption": "Diagrama 29a correcto — flujo principal: EOF antes de imprimir, Convierte Importe al final del loop",
+      "code": "flowchart TD\n    A([Inicio]) --> B[Inicializar Variables]\n    B --> C[Abrir archivo DEVOLUCIONES]\n    C --> D[/Leer Fecha Parametro/]\n    D --> E[[Validar Fecha]]\n    E --> F{Fecha valida}\n    F -->|NO| G[Fecha Invalida]\n    G --> H([Fin])\n    F -->|SI| I[/Leer DEVOLUCIONES/]\n    I --> J{EOF}\n    J -->|SI| K[Imprimir Tot_F + Tot_M]\n    K --> H\n    J -->|NO| L{Tipo de\\nPersonas = F}\n    L -->|SI| M[Tot_F = Tot_F + Importe]\n    L -->|NO| N[Tot_M = Tot_M + Importe]\n    M --> O[Imprimir CHEQUE\\nFecha Nombre Beneficiario\\nImporte letra Importe numero]\n    N --> O\n    O --> P[[Convierte Importe]]\n    P --> I\n    style A fill:#1a3c1a,stroke:#56d364,color:#56d364\n    style H fill:#3c1515,stroke:#f85149,color:#f85149\n    style J fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style F fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style L fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style E fill:#1a1000,stroke:#ffa657,color:#ffa657\n    style P fill:#1a1000,stroke:#ffa657,color:#ffa657\n    style G fill:#2d0f0f,stroke:#f85149,color:#f85149"
+    },
+    {
+      "type": "mermaid",
+      "num": "22",
+      "caption": "Subprograma Validar Fecha (D29.1) — mes inválido va directo a Fecha Inválida; bisiesto con OR correcto",
+      "code": "flowchart TD\n    A([Validar Fecha]) --> B{Mes >= 1\\ny Mes <= 12}\n    B -->|NO - mes invalido| Z[Fecha Invalida]\n    Z --> Fin([Fin subprograma])\n    B -->|SI| C{Ano%4 = 0}\n    C -->|NO| D[Ano 365 dias]\n    C -->|SI| E{Ano%100 != 0\\nOR Ano%400 = 0}\n    E -->|SI bisiesto| F[Ano bisiesto - Feb 29 dias]\n    E -->|NO secular| D\n    D --> G{Mes=2 y\\nDia>=1 y Dia<=28}\n    F --> H{Mes=2 y\\nDia>=1 y Dia<=29}\n    G -->|SI| VA[Fecha Valida] --> Fin\n    G -->|NO| MM{Mes=4 o 6\\no 9 o 11}\n    H -->|SI| VA\n    H -->|NO| MM\n    MM -->|SI 30 dias| DD30{Dia>=1\\ny Dia<=30}\n    MM -->|NO 31 dias| DD31{Dia>=1\\ny Dia<=31}\n    DD30 -->|SI| VA\n    DD30 -->|NO| Z\n    DD31 -->|SI| VA\n    DD31 -->|NO| Z\n    style A fill:#1a3c1a,stroke:#56d364,color:#56d364\n    style Fin fill:#3c1515,stroke:#f85149,color:#f85149\n    style B fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style C fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style E fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style G fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style H fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style MM fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style DD30 fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style DD31 fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style VA fill:#1a3c1a,stroke:#56d364,color:#c9d1d9\n    style Z fill:#2d0f0f,stroke:#f85149,color:#f85149"
+    },
+    {
+      "type": "h2",
+      "id": "ejercicio-18",
+      "n": "17",
+      "text": "Ejercicio: Separadores de miles en cadena numérica"
+    },
+    {
+      "type": "p",
+      "text": "Función que recibe un número entero como cadena y lo devuelve con separadores de miles. Ejemplo: <code>1234567890</code> → <code>1,234,567,890</code>. La clave es recorrer la cadena de <strong>derecha a izquierda</strong> usando dos contadores: <code>n</code> (posición actual en la cadena, inicia en <code>Long cadena</code>) y <code>y</code> (dígitos impresos en el grupo actual, de 0 a 2). Cada vez que <code>y</code> llega a 3 se inserta una coma y <code>y</code> vuelve a 0."
+    },
+    {
+      "type": "callout",
+      "title": "⚠️ El error de D100 y D102 — n+1 en lugar de n-1",
+      "text": "<strong>Diagrama 100 y Diagrama 102</strong> tienen el mismo error fundamental: el paso de actualización usa <code>n+1</code> (incrementa) en lugar de <code>n-1</code> (decrementa). Como <code>n</code> arranca en <code>Long cadena</code> (la longitud total de la cadena) y se incrementa en cada vuelta, desde la primera iteración <code>n</code> supera la longitud de la cadena y accede a una posición que no existe. Además, la condición de salida es <code>n &lt; 1</code>, que jamás se cumple si <code>n</code> solo crece — el algoritmo entra en <strong>bucle infinito</strong>.<br><br>El recorrido correcto (D101) va de derecha a izquierda: <code>n</code> inicia en <code>Long cadena</code>, se <strong>decrementa</strong> con <code>n-1</code> en cada paso, y el loop termina exactamente cuando <code>n &lt; 1</code> (es decir, cuando se ha procesado el último carácter en posición 1)."
+    },
+    {
+      "type": "mermaid",
+      "num": "23",
+      "caption": "Diagrama 101 correcto — n decrementa (n-1) de derecha a izquierda; coma cada 3 dígitos; termina en n<1",
+      "code": "flowchart TD\n    A([Inicio]) --> B[y=0 / n=0]\n    B --> C[/Dame un numero = Cadena/]\n    C --> D[n = Long cadena]\n    D --> E[Imprime cadena en posicion n]\n    F[y=0] --> E\n    E --> G[y+1 / n-1]\n    G --> H{n < 1}\n    H -->|SI - cadena agotada| I([Fin])\n    H -->|NO| J{y < 3}\n    J -->|SI - mismo grupo| E\n    J -->|NO - grupo completo| K[Imprime una coma]\n    K --> F\n    style A fill:#1a3c1a,stroke:#56d364,color:#56d364\n    style I fill:#3c1515,stroke:#f85149,color:#f85149\n    style H fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style J fill:#2d1f40,stroke:#d2a8ff,color:#d2a8ff\n    style E fill:#0d2035,stroke:#79c0ff,color:#c9d1d9\n    style K fill:#1a1000,stroke:#ffa657,color:#ffa657"
+    },
+    {
+      "type": "h2",
+      "id": "ejercicio-19",
+      "n": 19,
+      "text": "Ejercicio 19 — Tabla de multiplicar"
+    },
+    {
+      "type": "p",
+      "text": "El programa pide un número entre 1 y 10, valida que sea correcto y luego imprime su tabla de multiplicar completa (del 1 al 10). El reto está en dos puntos clave: la dirección del bucle de retroalimentación cuando el número es inválido, y a qué nodo regresa el bucle interno tras imprimir cada línea."
+    },
+    {
+      "type": "callout",
+      "kind": "error",
+      "title": "D79 — Lógica de validación invertida",
+      "text": "El 'Sí' de la condición (número válido) regresa al prompt de entrada, y el 'No' (inválido) avanza a generar la tabla. El flujo está exactamente al revés: el programa imprime la tabla del número inválido y re-solicita cuando el usuario acierta."
+    },
+    {
+      "type": "mermaid",
+      "num": "24",
+      "caption": "Diagrama 79 — condicional de validación invertido",
+      "code": "flowchart TD\n    A([Inicio]) --> B[Cont = 0\\nNum = 0]\n    B --> C[/ingresa un numero\\nentre 10 y 0/]\n    C --> D[/Recibe numero\\nintroducido/]\n    D --> E{Num > 0\\ny\\nNum <= 10}\n    E -->|Si — valido| C\n    E -->|No — invalido| F{Cont > 10}\n    F -->|Si| G([Fin])\n    F -->|No| H[Imprime: Res = Cont * Num]\n    H --> I[Cont + 1]\n    I --> E"
+    },
+    {
+      "type": "callout",
+      "kind": "error",
+      "title": "D80 — Bucle interno no regresa a la condición de parada",
+      "text": "Después de 'Cont+1', la flecha regresa directamente al bloque 'Imprime' en lugar de volver al rombo 'Cont>10'. La condición de terminación nunca se evalúa de nuevo: el bucle imprime indefinidamente sin posibilidad de llegar a Fin."
+    },
+    {
+      "type": "mermaid",
+      "num": "25",
+      "caption": "Diagrama 80 — bucle interno omite la verificación Cont>10",
+      "code": "flowchart TD\n    A([Inicio]) --> B[Cont = 0\\nNum = 0]\n    B --> C[/ingresa un numero\\nentre 10 y 0/]\n    C --> D[/Recibe numero\\nintroducido/]\n    D --> E{Num > 0\\ny\\nNum <= 10}\n    E -->|No — invalido| C\n    E -->|Si — valido| F{Cont > 10}\n    F -->|Si| G([Fin])\n    F -->|No| H[Imprime: Res = Cont * Num]\n    H --> I[Cont + 1]\n    I --> H"
+    },
+    {
+      "type": "callout",
+      "kind": "success",
+      "title": "D81 — Flujo correcto",
+      "text": "El 'No' de la validación regresa al prompt (re-solicita entrada inválida). El 'Sí' avanza al bucle. Tras imprimir y hacer Cont+1, el bucle regresa al rombo 'Cont>10' para evaluar si ya se completaron las 10 líneas. Cuando Cont supera 10, el programa termina."
+    },
+    {
+      "type": "mermaid",
+      "num": "26",
+      "caption": "Diagrama 81 — correcto",
+      "code": "flowchart TD\n    A([Inicio]) --> B[Cont = 0\\nNum = 0]\n    B --> C[/ingresa un numero\\nentre 10 y 0/]\n    C --> D[/Recibe numero\\nintroducido/]\n    D --> E{Num > 0\\ny\\nNum <= 10}\n    E -->|No — invalido| C\n    E -->|Si — valido| F{Cont > 10}\n    F -->|Si| G([Fin])\n    F -->|No| H[Imprime: Res = Cont * Num]\n    H --> I[Cont + 1]\n    I --> F"
+    },
+    {
+      "type": "h2",
+      "id": "checklist",
+      "n": "18",
+      "text": "Checklist para evaluar un diagrama"
+    },
+    {
+      "type": "p",
+      "text": "Cuando el examen te presenta varios diagramas y tienes que elegir el correcto, no analices todo — localiza los puntos criticos primero y descarta rapido:"
+    },
+    {
+      "type": "callout",
+      "title": "✅ Puntos criticos de verificacion",
+      "text": "<strong>1. Clasificacion de archivos</strong> — ¿estan ordenados por la clave correcta?<br><strong>2. Reglas del MATCH</strong> — ¿cada rama lee el archivo correcto? La rama igual lee ambos, menor solo el maestro, mayor solo el movimiento.<br><strong>3. YES/NO en EOF</strong> — el error mas comun. EOF=SI significa que ya no hay registros; ahi se graba, no se sigue buscando.<br><strong>4. Validacion completa</strong> — si el problema pide validar dos campos, el diagrama debe comparar ambos.<br><strong>5. Flujo post-error</strong> — ¿el diagrama aborta o continua? Depende del problema, no de tu intuicion.<br><strong>6. Cortes de control</strong> — ¿se imprimen subtotales antes de resetear acumuladores? El orden importa."
+    },
+    {
+      "type": "quote",
+      "text": "El diagrama correcto no es el que parece mas completo — es el que cumple exactamente lo que el problema dice. Ni mas, ni menos.",
+      "cite": "Regla de evaluacion"
+    }
+  ]
+}

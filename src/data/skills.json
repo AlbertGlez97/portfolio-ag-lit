@@ -1,0 +1,65 @@
+{
+  "skills": [
+    {
+      "id": "frontend",
+      "level": 9,
+      "items": [
+        "Vue.js 3",
+        "Svelte",
+        "JavaScript ES6+",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "Redux"
+      ],
+      "label": "Frontend"
+    },
+    {
+      "id": "backend",
+      "level": 7,
+      "items": [
+        "Node.js",
+        "Express",
+        "C# .NET MVC",
+        ".NET Core",
+        "APIs REST"
+      ],
+      "label": "Backend"
+    },
+    {
+      "id": "databases",
+      "level": 7,
+      "items": [
+        "SQL Server",
+        "MongoDB"
+      ],
+      "label": "Bases de datos"
+    },
+    {
+      "id": "devops",
+      "level": 6,
+      "items": [
+        "Docker",
+        "Git",
+        "GitLab",
+        "GitHub",
+        "Selenium",
+        "Scrum",
+        "Jira"
+      ],
+      "label": "DevOps & Herramientas"
+    },
+    {
+      "id": "ai",
+      "level": 5,
+      "items": [
+        "OpenAI API",
+        "Prompt Engineering",
+        "RAG",
+        "LangChain"
+      ],
+      "label": "IA Aplicada"
+    }
+  ]
+}

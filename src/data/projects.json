@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "id": "atotonilco-estudio",
+      "order": 1,
+      "icon": "📷",
+      "year": 2023,
+      "type": "web",
+      "cta_label": "live",
+      "cta_url": "https://www.atotonilcoestudio.com/",
+      "tags": [
+        "C# .NET MVC",
+        "JavaScript",
+        "jQuery",
+        "Bootstrap",
+        "Razor"
+      ],
+      "title": "Atotonilco Estudio",
+      "description": "Sitio web para un estudio fotográfico con galería de imágenes optimizada, SEO y performance A+. Diseño responsivo centrado en la experiencia visual."
+    },
+    {
+      "id": "carnal-mx",
+      "order": 2,
+      "icon": "🎭",
+      "year": 2023,
+      "type": "web",
+      "cta_label": "live",
+      "cta_url": "https://www.carnalmx.com/",
+      "tags": [
+        "C# .NET MVC",
+        "SQL Server",
+        "APIs REST",
+        "Bootstrap",
+        "Razor"
+      ],
+      "title": "Carnal MX",
+      "description": "Plataforma de crónica contemporánea sobre la Ciudad de México. Panel administrativo con CRUD completo, APIs REST y base de datos SQL Server."
+    }
+  ]
+}
