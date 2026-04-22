@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-ag",
+  "version": "0.1.0",
+  "description": "Portafolio personal de Alberto González — Full Stack × IA. Lit + Vite + Atomic Design.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lit": "^3.2.0",
+    "mermaid": "^11.14.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}
