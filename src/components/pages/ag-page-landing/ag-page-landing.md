@@ -1,0 +1,24 @@
+# ag-page-landing
+
+> Page del landing (ruta `/`). Orquesta los 9 organismos del landing en Light DOM.
+
+## Propiedades
+
+| Propiedad | Tipo | Default | Descripción |
+|-----------|------|---------|-------------|
+| — | — | — | Page sin props públicas — todo desde contentService |
+
+## Notas
+
+- **Light DOM (`createRenderRoot() { return this; }`)**: requisito documentado en `ag-organism-nav.md`. Los ids de section viven en el DOM global para que el IntersectionObserver del nav los encuentre.
+- **Loading y error states**: mientras `contentService.load()` está en vuelo, renderiza `.ag-page-loading` (spinner textual). Si falla, `.ag-page-error` con el mensaje. Clases definidas en `src/styles/pages.css`.
+- **i18n**: se suscribe a `i18nService` en connectedCallback; cualquier `i18nService.set(locale)` dispara un `requestUpdate()` que re-renderiza toda la page con el nuevo locale.
+- **Constantes page-level**: `NAV_LINKS`, `TERMINAL_CHIPS`, `CATEGORY_LABELS` viven en este archivo. Localizar en el futuro implica moverlas a content.json o calcular desde i18nService.
+- **Section ids**:
+  - `#proyectos` → sobre el host de `ag-organism-projects-grid`
+  - `#laboratorio` → sobre el host de `ag-organism-laboratorio-list`
+  - `#terminal` → sobre `<section>` wrapper (terminal no tiene `padding` propio)
+  - `#contacto` → sobre `<section>` wrapper (agrupa eyebrow + grid de links/form)
+- **Top padding del hero**: viene del organism (`padding-top: var(--nav-h)`). El nav fijo no tapa el contenido.
+- **Contact form sin `submitFn`**: usa el `_defaultSubmit` del organismo (placeholder con setTimeout 800ms). TODO marcado en ambos lados para conectar al backend.
+- **Prompt del hero**: se construye como `~/${firstName.toLowerCase()}` — si `info.name` es "Alberto González", el prompt es `~/alberto`.
