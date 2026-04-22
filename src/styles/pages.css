@@ -1,0 +1,81 @@
+/* Estilos globales para las pages (Light DOM). Aplican a clases con
+   prefijo `.ag-page-*` que SOLO se usan en archivos de page. No exportar
+   este vocabulario a organismos ni moléculas — ellos viven en shadow. */
+
+.ag-page-loading,
+.ag-page-error {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 3rem;
+  font-family: var(--mono);
+  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
+  color: var(--fg-dim);
+  text-align: center;
+}
+
+.ag-page-error {
+  color: var(--orange);
+}
+
+.ag-page-section {
+  padding: 5rem 0;
+  scroll-margin-top: var(--nav-h);
+}
+
+.ag-page-wrap {
+  max-width: var(--wrap-max);
+  margin: 0 auto;
+  padding: 0 var(--wrap-pad);
+}
+
+.ag-page-contact-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.ag-page-lab-hero {
+  padding: 10rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.ag-page-lab-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, var(--line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+  background-size: 4.5rem 4.5rem;
+  mask-image: radial-gradient(ellipse 80% 60% at 20% 50%, #000 20%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 20% 50%, #000 20%, transparent 85%);
+  opacity: 0.8;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ag-page-lab-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 56.25rem) {
+  .ag-page-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 45rem) {
+  .ag-page-wrap {
+    padding: 0 var(--wrap-pad-sm);
+  }
+  .ag-page-lab-hero {
+    padding: 8rem 0 3rem;
+  }
+}
