@@ -1,13 +1,15 @@
 # ag-molecule-article-card
 
-> Card del grid del laboratorio: tag + fecha arriba, título + excerpt (clamp 1 línea), foot con read time y "Leer →". Toda la card es link.
+> Card del grid del laboratorio: tags + fecha arriba, título + excerpt (clamp 1 línea), foot con read time y "Leer →". Toda la card es link.
 
 ## Propiedades
 
 | Propiedad | Tipo | Default | Descripción |
 |-----------|------|---------|-------------|
-| category | String | '' | Variant del tag |
-| categoryLabel | String | '' | Label de la categoría |
+| tags | Array\<string\> | `[]` | Array de tag IDs a renderizar como chips |
+| tagsLabels | Object | `{}` | Mapa `id → label` para el texto visible de cada chip. Fallback al id si falta |
+| category | String | '' | _Legado — conservado para compatibilidad, ya no se renderiza_ |
+| categoryLabel | String | '' | _Legado — conservado para compatibilidad, ya no se renderiza_ |
 | date | String | '' | Fecha ya formateada |
 | title | String | '' | Título |
 | excerpt | String | '' | Excerpt (se recorta a 1 línea con ellipsis) |
@@ -31,8 +33,8 @@
 
 ```html
 <ag-molecule-article-card
-  category="ia"
-  categoryLabel="IA"
+  .tags=${['javascript', 'litelement']}
+  .tagsLabels=${{ javascript: 'JavaScript', litelement: 'LitElement' }}
   date="28 · MAR · 2025"
   title="Embeddings caseros"
   excerpt="Un pipeline con all-MiniLM..."

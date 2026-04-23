@@ -234,6 +234,8 @@ class AgOrganismArticlesBoard extends LitElement {
                     <ag-molecule-article-card
                       category=${a.category || ''}
                       categoryLabel=${a.categoryLabel || ''}
+                      .tags=${a.tags || []}
+                      .tagsLabels=${a.tagsLabels || {}}
                       date=${a.date || ''}
                       title=${a.title || ''}
                       excerpt=${a.excerpt || ''}

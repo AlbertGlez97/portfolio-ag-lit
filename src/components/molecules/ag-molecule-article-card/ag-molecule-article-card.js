@@ -10,8 +10,10 @@ import '../../atoms/ag-atom-text/ag-atom-text.js';
  * Top: tag de categoría + fecha. Medio: título (card-sm) + excerpt.
  * Foot: read time con dot + flecha "Leer →". Toda la card es link.
  *
- * @property {string} category - Variant del tag.
- * @property {string} categoryLabel - Label de la categoría.
+ * @property {string} category - Variant del tag (legado, conservado para compatibilidad — ya no se renderiza).
+ * @property {string} categoryLabel - Label de la categoría (legado, conservado para compatibilidad — ya no se renderiza).
+ * @property {Array<string>} tags - Array de tag IDs a renderizar como chips.
+ * @property {Object} tagsLabels - Mapa `id → label` para el texto visible de cada chip. Fallback al id si falta.
  * @property {string} date - Fecha (ej: "28 · MAR · 2025").
  * @property {string} title - Título.
  * @property {string} excerpt - Excerpt.
@@ -21,8 +23,8 @@ import '../../atoms/ag-atom-text/ag-atom-text.js';
  *
  * @example
  *   <ag-molecule-article-card
- *     category="ia"
- *     categoryLabel="IA"
+ *     .tags=${['javascript', 'litelement']}
+ *     .tagsLabels=${{ javascript: 'JavaScript', litelement: 'LitElement' }}
  *     date="28 · MAR · 2025"
  *     title="Embeddings caseros"
  *     excerpt="Un pipeline con all-MiniLM..."
@@ -34,6 +36,8 @@ class AgMoleculeArticleCard extends LitElement {
   static properties = {
     category: { type: String },
     categoryLabel: { type: String },
+    tags: { type: Array },
+    tagsLabels: { type: Object },
     date: { type: String },
     title: { type: String },
     excerpt: { type: String },
@@ -48,6 +52,8 @@ class AgMoleculeArticleCard extends LitElement {
     super();
     this.category = '';
     this.categoryLabel = '';
+    this.tags = [];
+    this.tagsLabels = {};
     this.date = '';
     this.title = '';
     this.excerpt = '';
@@ -60,7 +66,11 @@ class AgMoleculeArticleCard extends LitElement {
     return html`
       <a href=${this.href}>
         <div class="card-top">
-          <ag-atom-tag variant=${this.category}>${this.categoryLabel}</ag-atom-tag>
+          <div class="tags">
+            ${this.tags.map(
+              (t) => html`<ag-atom-tag variant=${t}>${this.tagsLabels[t] || t}</ag-atom-tag>`
+            )}
+          </div>
           <span class="date">${this.date}</span>
         </div>
         <ag-atom-heading level="3" variant="card-sm">${this.title}</ag-atom-heading>

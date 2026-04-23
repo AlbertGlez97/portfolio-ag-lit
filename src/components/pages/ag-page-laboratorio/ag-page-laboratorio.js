@@ -70,6 +70,7 @@ class AgPageLaboratorio extends LitElement {
       category: a.category,
       categoryLabel: CATEGORY_LABELS[a.category] || a.category,
       tags: a.tags || [],
+      tagsLabels: CATEGORY_LABELS,
       date: formatDateDots(a.published_at),
       published_at: a.published_at,
       title: a.title,

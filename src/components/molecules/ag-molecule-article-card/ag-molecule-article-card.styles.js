@@ -61,6 +61,13 @@ export const styles = css`
     gap: 0.875rem;
   }
 
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    min-width: 0;
+  }
+
   .date {
     font-family: var(--mono);
     font-size: var(--text-xs);
