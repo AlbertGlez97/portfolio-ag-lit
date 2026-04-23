@@ -2,6 +2,7 @@
   "id": "javascript-esencial",
   "slug": "javascript-esencial-web-components",
   "category": "javascript",
+  "tags": ["javascript", "litelement", "css", "es6"],
   "published_at": "2026-04-23",
   "updated_at": null,
   "read_minutes": 9,

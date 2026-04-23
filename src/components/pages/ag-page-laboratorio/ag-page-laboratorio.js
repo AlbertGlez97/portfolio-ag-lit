@@ -69,6 +69,7 @@ class AgPageLaboratorio extends LitElement {
       slug: a.slug,
       category: a.category,
       categoryLabel: CATEGORY_LABELS[a.category] || a.category,
+      tags: a.tags || [],
       date: formatDateDots(a.published_at),
       published_at: a.published_at,
       title: a.title,
@@ -87,11 +88,15 @@ class AgPageLaboratorio extends LitElement {
     const total = articles.length;
 
     const uniqueCategories = [...new Set(articles.map((a) => a.category))];
-    const categoryChips = uniqueCategories
+    const categoryLabels = uniqueCategories
+      .map((id) => CATEGORY_LABELS[id] || id)
+      .sort((a, b) => a.localeCompare(b));
+
+    const uniqueTags = [...new Set(articles.flatMap((a) => a.tags || []))];
+    const tagChips = uniqueTags
       .map((id) => ({ id, label: CATEGORY_LABELS[id] || id }))
       .sort((a, b) => a.label.localeCompare(b.label));
-    const filters = [{ id: 'all', label: 'Todos' }, ...categoryChips];
-    const categoryLabels = categoryChips.map((c) => c.label);
+    const filters = [{ id: 'all', label: 'Todos' }, ...tagChips];
 
     return html`
       <ag-organism-nav .links=${NAV_LINKS_REMOTE}></ag-organism-nav>

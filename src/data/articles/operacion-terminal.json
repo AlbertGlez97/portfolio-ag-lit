@@ -2,6 +2,7 @@
   "id": "operacion-terminal",
   "slug": "operacion-terminal-el-mapa-del-tesoro",
   "category": "linux",
+  "tags": ["linux", "terminal", "bash"],
   "published_at": "2025-04-21",
   "updated_at": null,
   "read_minutes": 12,

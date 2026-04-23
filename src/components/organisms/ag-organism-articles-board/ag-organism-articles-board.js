@@ -33,7 +33,7 @@ function pad2(n) {
  * El `id="laboratorio-board"` (o lo que corresponda) lo setea la page en
  * el host, no el organismo.
  *
- * @property {Array} articles - `[{ id, slug, category, categoryLabel, date, title, excerpt, featured, published_at, readTime, href?, featuredSvg?, vlabel? }]`
+ * @property {Array} articles - `[{ id, slug, category, categoryLabel, tags?, date, title, excerpt, featured, published_at, readTime, href?, featuredSvg?, vlabel? }]`
  * @property {Array<{id, label}>} filters - Filtros disponibles (incluido `{ id: 'all', label: 'Todos' }`).
  * @property {Array<{value, label}>} sortOptions - Opciones del select de sort.
  * @property {string} searchPlaceholder - Placeholder del search.
@@ -114,14 +114,14 @@ class AgOrganismArticlesBoard extends LitElement {
 
   _countFor(filterId) {
     if (filterId === 'all') return this.articles.length;
-    return this.articles.filter((a) => a.category === filterId).length;
+    return this.articles.filter((a) => a.tags?.includes(filterId)).length;
   }
 
   _getFiltered() {
     let list = this.articles.slice();
 
     if (this._activeFilter !== 'all') {
-      list = list.filter((a) => a.category === this._activeFilter);
+      list = list.filter((a) => a.tags?.includes(this._activeFilter));
     }
 
     const q = this._query.trim().toLowerCase();

@@ -11,4 +11,12 @@ export const CATEGORY_LABELS = {
   javascript: 'JavaScript',
   algoritmos: 'Algoritmos',
   linux: 'Linux',
+  es6: 'ES6+',
+  poo: 'POO',
+  patrones: 'Patrones',
+  terminal: 'Terminal',
+  bash: 'Bash',
+  webcomponents: 'Web Components',
+  logica: 'Lógica',
+  css: 'CSS',
 };
