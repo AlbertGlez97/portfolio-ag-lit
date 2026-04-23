@@ -158,10 +158,11 @@ export const styles = css`
     font-family: var(--serif);
     font-size: 3.75rem;
     font-weight: 500;
-    float: left;
-    line-height: 0.9;
-    padding: 0.375rem 0.75rem 0 0;
     color: var(--cyan);
+    display: inline-block;
+    line-height: 0.8;
+    vertical-align: bottom;
+    margin-right: 0.05em;
   }
 
   /* Spacing entre bloques (body atoms no tienen margin propio) */
