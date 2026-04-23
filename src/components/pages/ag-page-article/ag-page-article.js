@@ -1,6 +1,7 @@
 import { LitElement, html } from 'lit';
 import { contentService } from '../../../services/content.service.js';
 import { formatDateDots, formatDateLong } from '../../../utils/format-date.js';
+import { CATEGORY_LABELS } from '../../../data/categories.js';
 import '../../atoms/ag-atom-text/ag-atom-text.js';
 import '../../organisms/ag-organism-reading-progress/ag-organism-reading-progress.js';
 import '../../organisms/ag-organism-nav/ag-organism-nav.js';
@@ -14,13 +15,6 @@ const NAV_LINKS_REMOTE = [
   { href: '/#terminal',   sectionId: 'terminal',    idx: '03', label: 'Terminal' },
   { href: '/#contacto',   sectionId: 'contacto',    idx: '04', label: 'Contacto', keep: true },
 ];
-
-const CATEGORY_LABELS = {
-  litelement: 'LitElement',
-  javascript: 'JavaScript',
-  algoritmos: 'Algoritmos',
-  linux: 'Linux',
-};
 
 /**
  * <ag-page-article> — Page del artículo individual (ruta `/laboratorio/:slug`).

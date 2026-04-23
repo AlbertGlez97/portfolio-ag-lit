@@ -1,6 +1,7 @@
 import { LitElement, html } from 'lit';
 import { contentService } from '../../../services/content.service.js';
 import { formatDateDots } from '../../../utils/format-date.js';
+import { CATEGORY_LABELS } from '../../../data/categories.js';
 import '../../atoms/ag-atom-eyebrow/ag-atom-eyebrow.js';
 import '../../atoms/ag-atom-text/ag-atom-text.js';
 import '../../organisms/ag-organism-nav/ag-organism-nav.js';
@@ -28,13 +29,6 @@ const TERMINAL_CHIPS = [
   { cmd: 'contact', label: 'contact' },
   { cmd: 'help',    label: 'help' },
 ];
-
-const CATEGORY_LABELS = {
-  litelement: 'LitElement',
-  javascript: 'JavaScript',
-  algoritmos: 'Algoritmos',
-  linux: 'Linux',
-};
 
 function shuffle(arr) {
   const copy = arr.slice();
