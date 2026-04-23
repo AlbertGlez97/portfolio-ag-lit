@@ -1,0 +1,350 @@
+{
+  "id": "javascript-esencial",
+  "slug": "javascript-esencial-web-components",
+  "category": "cs",
+  "published_at": "2026-04-23",
+  "updated_at": null,
+  "read_minutes": 9,
+  "related_ids": [
+    "poo-patrones-litelement",
+    "litelement-profundidad"
+  ],
+  "featured": false,
+  "featured_svg": "<svg viewBox=\"0 0 600 420\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"jsbg\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#0d1117\"/><stop offset=\"100%\" stop-color=\"#07090f\"/></linearGradient><linearGradient id=\"jsbd\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7df1e\" stop-opacity=\"0.5\"/><stop offset=\"100%\" stop-color=\"#58a6ff\" stop-opacity=\"0.5\"/></linearGradient><style>.m{font-family:'JetBrains Mono','Fira Code',monospace}</style></defs><rect width=\"600\" height=\"420\" fill=\"url(#jsbg)\" rx=\"12\"/><rect width=\"598\" height=\"418\" x=\"1\" y=\"1\" fill=\"none\" stroke=\"url(#jsbd)\" stroke-width=\"1\" rx=\"11\" opacity=\"0.6\"/><rect x=\"40\" y=\"30\" width=\"520\" height=\"260\" rx=\"6\" fill=\"#161b22\" stroke=\"#30363d\" stroke-width=\"1\"/><text x=\"60\" y=\"62\" class=\"m\" font-size=\"12\" fill=\"#8b949e\">// el motor de LitElement</text><text x=\"60\" y=\"90\" class=\"m\" font-size=\"13\" fill=\"#58a6ff\">class</text><text x=\"106\" y=\"90\" class=\"m\" font-size=\"13\" fill=\"#ffa657\"> MiBoton </text><text x=\"196\" y=\"90\" class=\"m\" font-size=\"13\" fill=\"#58a6ff\">extends</text><text x=\"268\" y=\"90\" class=\"m\" font-size=\"13\" fill=\"#56d364\"> LitElement </text><text x=\"376\" y=\"90\" class=\"m\" font-size=\"13\" fill=\"#e6edf3\">{</text><text x=\"60\" y=\"116\" class=\"m\" font-size=\"13\" fill=\"#58a6ff\">  static</text><text x=\"120\" y=\"116\" class=\"m\" font-size=\"13\" fill=\"#e6edf3\"> properties = { label: {</text><text x=\"60\" y=\"116\" class=\"m\" font-size=\"13\" fill=\"#e6edf3\"></text><text x=\"60\" y=\"140\" class=\"m\" font-size=\"13\" fill=\"#d2a8ff\">  render</text><text x=\"116\" y=\"140\" class=\"m\" font-size=\"13\" fill=\"#e6edf3\">() {</text><text x=\"60\" y=\"164\" class=\"m\" font-size=\"13\" fill=\"#58a6ff\">    return</text><text x=\"124\" y=\"164\" class=\"m\" font-size=\"13\" fill=\"#56d364\"> html</text><text x=\"156\" y=\"164\" class=\"m\" font-size=\"13\" fill=\"#e6edf3\">`</text><text x=\"168\" y=\"164\" class=\"m\" font-size=\"13\" fill=\"#a5d6ff\">&lt;button&gt;</text><text x=\"248\" y=\"164\" class=\"m\" font-size=\"13\" fill=\"#e6edf3\">${</text><text x=\"270\" y=\"164\" class=\"m\" font-size=\"13\" fill=\"#f8d37d\">this</text><text x=\"302\" y=\"164\" class=\"m\" font-size=\"13\" fill=\"#e6edf3\">.label}</text><text x=\"358\" y=\"164\" class=\"m\" font-size=\"13\" fill=\"#a5d6ff\">&lt;/button&gt;</text><text x=\"448\" y=\"164\" class=\"m\" font-size=\"13\" fill=\"#e6edf3\">`;}</text><text x=\"60\" y=\"188\" class=\"m\" font-size=\"13\" fill=\"#e6edf3\">}</text><text x=\"60\" y=\"216\" class=\"m\" font-size=\"13\" fill=\"#8b949e\">// async · Map · Set · HTTP · CSS vars</text><text x=\"60\" y=\"240\" class=\"m\" font-size=\"13\" fill=\"#8b949e\">// clases · módulos · spread · Promises</text><rect x=\"40\" y=\"316\" width=\"122\" height=\"32\" rx=\"6\" fill=\"#1c2128\" stroke=\"#f7df1e\" stroke-width=\"1\"/><text x=\"101\" y=\"337\" text-anchor=\"middle\" class=\"m\" font-size=\"11\" fill=\"#f7df1e\">ES6+</text><rect x=\"174\" y=\"316\" width=\"122\" height=\"32\" rx=\"6\" fill=\"#1c2128\" stroke=\"#58a6ff\" stroke-width=\"1\"/><text x=\"235\" y=\"337\" text-anchor=\"middle\" class=\"m\" font-size=\"11\" fill=\"#58a6ff\">async/await</text><rect x=\"308\" y=\"316\" width=\"122\" height=\"32\" rx=\"6\" fill=\"#1c2128\" stroke=\"#56d364\" stroke-width=\"1\"/><text x=\"369\" y=\"337\" text-anchor=\"middle\" class=\"m\" font-size=\"11\" fill=\"#56d364\">Map · Set</text><rect x=\"442\" y=\"316\" width=\"118\" height=\"32\" rx=\"6\" fill=\"#1c2128\" stroke=\"#d2a8ff\" stroke-width=\"1\"/><text x=\"501\" y=\"337\" text-anchor=\"middle\" class=\"m\" font-size=\"11\" fill=\"#d2a8ff\">CSS vars</text><text x=\"576\" y=\"408\" text-anchor=\"end\" class=\"m\" font-size=\"10\" fill=\"#64748b\">9 min lectura</text><text x=\"576\" y=\"394\" text-anchor=\"end\" class=\"m\" font-size=\"10\" fill=\"#f7df1e\">JavaScript</text></svg>",
+  "vlabel": "// ES6+ · async · Map · HTTP · CSS vars",
+  "title": "JavaScript esencial:",
+  "title_accent": "el motor de los Web Components",
+  "excerpt": "Las features de JavaScript moderno que necesitas dominar antes de tocar LitElement: clases, módulos, template literals, async/await, Map y Set, HTTP REST y CSS custom properties.",
+  "toc": [
+    {
+      "id": "clases-es6",
+      "label": "Clases ES6"
+    },
+    {
+      "id": "modulos-templates",
+      "label": "Módulos y template literals"
+    },
+    {
+      "id": "destructuring-spread",
+      "label": "Destructuring y spread"
+    },
+    {
+      "id": "async-await",
+      "label": "Async / Await"
+    },
+    {
+      "id": "map-set",
+      "label": "Map y Set"
+    },
+    {
+      "id": "http-rest",
+      "label": "HTTP y REST"
+    },
+    {
+      "id": "css-variables",
+      "label": "CSS Custom Properties"
+    }
+  ],
+  "body": [
+    {
+      "type": "lede",
+      "text": "LitElement no es magia. Es JavaScript moderno bien usado. Antes de entender cómo funciona un componente reactivo, necesitas dominar el lenguaje que lo sostiene: clases ES6, módulos, template literals, async/await, y las estructuras de datos que el examen pone a prueba."
+    },
+    {
+      "type": "h2",
+      "id": "clases-es6",
+      "n": "01",
+      "text": "Clases ES6: el ADN de LitElement"
+    },
+    {
+      "type": "p",
+      "text": "Cada componente LitElement es una clase ES6 que extiende <code>LitElement</code>. Si las clases no están claras, el resto del framework no tiene sentido. Una clase encapsula estado (propiedades) y comportamiento (métodos) en un objeto reutilizable. La herencia permite que tu componente herede todo el motor reactivo de Lit con una sola línea."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "clases-es6.js",
+      "lines": [
+        "class Animal {",
+        "  constructor(nombre) {",
+        "    this.nombre = nombre;  // propiedad de instancia",
+        "  }",
+        "  hablar() {",
+        "    return `${this.nombre} hace un sonido`;",
+        "  }",
+        "}",
+        "",
+        "class Perro extends Animal {",
+        "  hablar() {  // override — polimorfismo",
+        "    return `${this.nombre} ladra: Guau!`;",
+        "  }",
+        "}",
+        "",
+        "// En LitElement es exactamente lo mismo:",
+        "class MiBoton extends LitElement {",
+        "  render() {  // override de render()",
+        "    return html`<button>${this.label}</button>`;",
+        "  }",
+        "}"
+      ]
+    },
+    {
+      "type": "callout",
+      "kind": "error",
+      "title": "super() siempre primero — sin excepción",
+      "text": "En cualquier clase que extienda otra, el constructor DEBE llamar a <code>super()</code> antes de usar <code>this</code>. LitElement lo requiere. Si lo omites, el navegador lanza <code>ReferenceError: Must call super constructor</code> en tiempo de ejecución."
+    },
+    {
+      "type": "h2",
+      "id": "modulos-templates",
+      "n": "02",
+      "text": "Módulos y template literals"
+    },
+    {
+      "type": "p",
+      "text": "Los módulos ES6 permiten dividir el código en archivos e importar solo lo que necesitas. Los template literals (con backtick) permiten interpolar variables directamente en strings. LitElement usa ambos a la vez: importas el framework y defines el HTML del componente con el tagged template literal <code>html\\`...\\`</code>, que parsea y optimiza el DOM automáticamente."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "modulos.js",
+      "lines": [
+        "// Exportar una clase para que otros archivos la usen",
+        "export class MiBoton extends LitElement { }",
+        "",
+        "// Importar selectivamente — solo lo que necesitas",
+        "import { LitElement, html, css } from 'lit';",
+        "import { MiBoton } from './mi-boton.js';"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "template-literals.js",
+      "lines": [
+        "const nombre = 'Cells';",
+        "const version = 3;",
+        "",
+        "// Template literal simple — interpola variables",
+        "const msg = `Hola desde ${nombre} v${version}`;",
+        "// 'Hola desde Cells v3'",
+        "",
+        "// Tagged template literal — asi funciona html`` de Lit",
+        "// La funcion 'html' procesa el template y crea nodos DOM eficientes",
+        "render() {",
+        "  return html`",
+        "    <button @click=${this._onClick}>",
+        "      ${this.label}",
+        "    </button>",
+        "  `;",
+        "}"
+      ]
+    },
+    {
+      "type": "h2",
+      "id": "destructuring-spread",
+      "n": "03",
+      "text": "Destructuring y spread"
+    },
+    {
+      "type": "p",
+      "text": "El destructuring extrae valores de arrays y objetos en variables individuales en una sola línea. El spread (<code>...</code>) crea copias superficiales y es crítico en LitElement: el framework detecta cambios comparando referencias con <code>===</code>. Mutar un array directamente no dispara el re-render porque la referencia no cambia. Spread crea una nueva referencia y Lit lo detecta automáticamente."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "destructuring-spread.js",
+      "lines": [
+        "// Object destructuring — extrae propiedades",
+        "const { nombre, edad, ciudad = 'Madrid' } = persona;",
+        "",
+        "// Array destructuring — extrae por posicion",
+        "const [primero, segundo, ...resto] = items;",
+        "",
+        "// Spread en objetos — crea copia con cambios",
+        "const actualizado = { ...usuario, edad: 26 };",
+        "",
+        "// Spread en arrays — fundamental en LitElement",
+        "// MAL: misma referencia, Lit NO re-renderiza",
+        "this.items.push(nuevoItem);",
+        "",
+        "// BIEN: nueva referencia, Lit SI re-renderiza",
+        "this.items = [...this.items, nuevoItem];"
+      ]
+    },
+    {
+      "type": "callout",
+      "kind": "warning",
+      "title": "Spread en LitElement — el error más común del examen",
+      "text": "LitElement detecta cambios comparando por referencia (<code>===</code>). Si haces <code>this.items.push(x)</code>, la referencia del array es la misma y Lit <strong>no</strong> re-renderiza. Solución: <code>this.items = [...this.items, x]</code>. Nueva referencia → nuevo render."
+    },
+    {
+      "type": "h2",
+      "id": "async-await",
+      "n": "04",
+      "text": "Async / Await"
+    },
+    {
+      "type": "p",
+      "text": "Los Web Components frecuentemente cargan datos al inicializarse o al recibir nuevas propiedades. <code>async/await</code> convierte el manejo de Promesas en código secuencial y legible, eliminando el anidamiento de callbacks. En LitElement, el patrón más común es hacer el fetch en <code>connectedCallback()</code> y llamar <code>requestUpdate()</code> al terminar, o reaccionar a cambios en <code>updated()</code>."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "async-litelement.js",
+      "lines": [
+        "// Fetch al conectar el componente al DOM",
+        "async connectedCallback() {",
+        "  super.connectedCallback();",
+        "  try {",
+        "    const res = await fetch('/api/datos');",
+        "    this.datos = await res.json();",
+        "    // requestUpdate() no es necesario si 'datos' es propiedad reactiva",
+        "  } catch (e) {",
+        "    this.error = e.message;",
+        "  }",
+        "}",
+        "",
+        "// Cargar en paralelo — Promise.all es mas rapido que await secuencial",
+        "const [usuarios, productos] = await Promise.all([",
+        "  fetch('/api/usuarios').then(r => r.json()),",
+        "  fetch('/api/productos').then(r => r.json()),",
+        "]);"
+      ]
+    },
+    {
+      "type": "h2",
+      "id": "map-set",
+      "n": "05",
+      "text": "Map y Set"
+    },
+    {
+      "type": "p",
+      "text": "<code>Map</code> almacena pares clave→valor donde la clave puede ser cualquier tipo — no solo strings como en los objetos literales. <code>Set</code> almacena valores únicos y elimina duplicados automáticamente. Ambos mantienen el orden de inserción, son iterables con <code>forEach</code> y <code>for...of</code>, y reportan su tamaño con la propiedad <code>.size</code>."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "map-set.js",
+      "lines": [
+        "// MAP — pares clave → valor, claves de cualquier tipo",
+        "const mapa = new Map();",
+        "mapa.set('nombre', 'Alberto');",
+        "mapa.set(42, 'la respuesta');",
+        "mapa.get('nombre');  // 'Alberto'",
+        "mapa.has(42);        // true",
+        "mapa.size;           // 2  <- propiedad, NO metodo",
+        "",
+        "// SET — valores unicos, sin duplicados",
+        "const set = new Set([1, 2, 2, 3, 3, 3]);",
+        "set.size;  // 3  <- los duplicados se ignoran",
+        "",
+        "// Caso de uso clasico: eliminar duplicados de un array",
+        "const sinDuplicados = [...new Set([1, 2, 2, 3])];",
+        "// [1, 2, 3]"
+      ]
+    },
+    {
+      "type": "callout",
+      "kind": "error",
+      "title": "Trampa del examen: .size es propiedad, no método",
+      "text": "<code>mapa.size</code> es correcto. <code>mapa.size()</code> lanza <code>TypeError: mapa.size is not a function</code>. Lo mismo aplica para Set. En el examen aparecen ambas formas — siempre elige la que <strong>no</strong> tiene paréntesis."
+    },
+    {
+      "type": "h2",
+      "id": "http-rest",
+      "n": "06",
+      "text": "HTTP y REST"
+    },
+    {
+      "type": "p",
+      "text": "REST (Representational State Transfer) es un estilo arquitectónico que usa HTTP semánticamente: cada método tiene un significado preciso, los recursos se identifican por URL, y los códigos de estado comunican el resultado. El servidor es stateless — no guarda estado entre peticiones."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "http-rest.js",
+      "lines": [
+        "// Metodos HTTP y su semantica",
+        "// GET    /usuarios      -> obtener datos     (sin body, idempotente)",
+        "// POST   /usuarios      -> crear recurso     (con body, no idempotente)",
+        "// PUT    /usuarios/1    -> actualizar entero (con body, idempotente)",
+        "// PATCH  /usuarios/1    -> actualizar parcial",
+        "// DELETE /usuarios/1    -> eliminar          (idempotente)",
+        "",
+        "// Codigos de estado clave",
+        "// 200 OK | 201 Created | 204 No Content",
+        "// 301 Moved Permanently | 302 Found (temporal)",
+        "// 400 Bad Request | 401 Unauthorized | 403 Forbidden | 404 Not Found",
+        "// 500 Internal Server Error"
+      ]
+    },
+    {
+      "type": "callout",
+      "kind": "warning",
+      "title": "401 vs 403 — distinción clave para el examen",
+      "text": "<strong>401 Unauthorized</strong>: el servidor no sabe quién eres — no hay token ni credenciales. <strong>403 Forbidden</strong>: el servidor sabe quién eres, pero no tienes permiso para ese recurso. Regla: 401 = 'No sé quién eres'. 403 = 'Sé quién eres, pero no puedes'."
+    },
+    {
+      "type": "callout",
+      "kind": "warning",
+      "title": "301 vs 302 — redirecciones permanente vs temporal",
+      "text": "<strong>301 Moved Permanently</strong>: la URL cambió para siempre. El navegador guarda en caché la nueva URL y no vuelve a preguntar por la original. <strong>302 Found</strong>: redirección temporal. El navegador siempre consulta la URL original porque podría cambiar de nuevo."
+    },
+    {
+      "type": "h2",
+      "id": "css-variables",
+      "n": "07",
+      "text": "CSS Custom Properties"
+    },
+    {
+      "type": "p",
+      "text": "Las variables CSS (custom properties) son el mecanismo de theming de los Web Components. A diferencia de las reglas CSS normales, las variables CSS heredan en cascada y cruzan la barrera del Shadow DOM, permitiendo personalizar componentes desde el exterior sin romper el encapsulamiento."
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "file": "variables-css.css",
+      "lines": [
+        "/* Definir variables globales en :root */",
+        ":root {",
+        "  --color-primario: #1a73e8;",
+        "  --espaciado: 16px;",
+        "}",
+        "",
+        "/* Usar con var() y valor de fallback opcional */",
+        "button {",
+        "  background: var(--color-primario, blue);",
+        "  padding: var(--espaciado, 8px);",
+        "}",
+        "",
+        "/* Personalizar un Web Component desde el exterior */",
+        "mi-boton {",
+        "  --btn-color: red;  /* entra al Shadow DOM via herencia CSS */",
+        "}"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "css-en-litelement.js",
+      "lines": [
+        "static styles = css`",
+        "  :host {",
+        "    --btn-color: blue; /* valor por defecto del componente */",
+        "  }",
+        "  button {",
+        "    background: var(--btn-color); /* usa la variable */",
+        "    color: white;",
+        "  }",
+        "`;"
+      ]
+    },
+    {
+      "type": "callout",
+      "kind": "success",
+      "title": "Las CSS variables sí cruzan el Shadow DOM",
+      "text": "Los estilos CSS normales no pueden entrar al Shadow DOM. Pero las custom properties heredan en cascada a través de él. Son el único canal de personalización visual desde el exterior del componente — la herramienta estándar de theming en LitElement y Cells."
+    }
+  ]
+}

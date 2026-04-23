@@ -1,0 +1,591 @@
+{
+  "id": "poo-patrones-litelement",
+  "slug": "poo-patrones-litelement",
+  "category": "cs",
+  "published_at": "2026-04-23",
+  "updated_at": null,
+  "read_minutes": 12,
+  "related_ids": [
+    "javascript-esencial",
+    "litelement-profundidad"
+  ],
+  "featured": false,
+  "featured_svg": "<svg viewBox=\"0 0 600 420\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"pb\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#0d1117\"/><stop offset=\"100%\" stop-color=\"#07090f\"/></linearGradient><linearGradient id=\"pbd\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#d2a8ff\" stop-opacity=\"0.5\"/><stop offset=\"100%\" stop-color=\"#56d364\" stop-opacity=\"0.5\"/></linearGradient><marker id=\"arr2\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L8,3 z\" fill=\"#8b949e\"/></marker><style>.m{font-family:'JetBrains Mono','Fira Code',monospace}</style></defs><rect width=\"600\" height=\"420\" fill=\"url(#pb)\" rx=\"12\"/><rect width=\"598\" height=\"418\" x=\"1\" y=\"1\" fill=\"none\" stroke=\"url(#pbd)\" stroke-width=\"1\" rx=\"11\" opacity=\"0.6\"/><rect x=\"210\" y=\"30\" width=\"180\" height=\"50\" rx=\"6\" fill=\"#1c1c2e\" stroke=\"#d2a8ff\" stroke-width=\"1.5\"/><text x=\"300\" y=\"51\" text-anchor=\"middle\" class=\"m\" font-size=\"11\" fill=\"#d2a8ff\">HTMLElement</text><text x=\"300\" y=\"67\" text-anchor=\"middle\" class=\"m\" font-size=\"10\" fill=\"#8b949e\">estandar del navegador</text><line x1=\"300\" y1=\"80\" x2=\"300\" y2=\"108\" stroke=\"#8b949e\" stroke-width=\"1.5\" marker-end=\"url(#arr2)\"/><rect x=\"200\" y=\"108\" width=\"200\" height=\"50\" rx=\"6\" fill=\"#1a2035\" stroke=\"#58a6ff\" stroke-width=\"1.5\"/><text x=\"300\" y=\"129\" text-anchor=\"middle\" class=\"m\" font-size=\"11\" fill=\"#58a6ff\">LitElement</text><text x=\"300\" y=\"145\" text-anchor=\"middle\" class=\"m\" font-size=\"10\" fill=\"#8b949e\">motor reactivo de Lit</text><line x1=\"300\" y1=\"158\" x2=\"300\" y2=\"186\" stroke=\"#8b949e\" stroke-width=\"1.5\" marker-end=\"url(#arr2)\"/><rect x=\"190\" y=\"186\" width=\"220\" height=\"50\" rx=\"6\" fill=\"#1a2820\" stroke=\"#56d364\" stroke-width=\"1.5\"/><text x=\"300\" y=\"207\" text-anchor=\"middle\" class=\"m\" font-size=\"11\" fill=\"#56d364\">MiComponente</text><text x=\"300\" y=\"223\" text-anchor=\"middle\" class=\"m\" font-size=\"10\" fill=\"#8b949e\">extends LitElement</text><rect x=\"40\" y=\"300\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#1c2128\" stroke=\"#ffa657\" stroke-width=\"1\"/><text x=\"100\" y=\"325\" text-anchor=\"middle\" class=\"m\" font-size=\"10\" fill=\"#ffa657\">Singleton</text><rect x=\"175\" y=\"300\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#1c2128\" stroke=\"#f85149\" stroke-width=\"1\"/><text x=\"235\" y=\"325\" text-anchor=\"middle\" class=\"m\" font-size=\"10\" fill=\"#f85149\">Observer</text><rect x=\"310\" y=\"300\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#1c2128\" stroke=\"#79c0ff\" stroke-width=\"1\"/><text x=\"370\" y=\"325\" text-anchor=\"middle\" class=\"m\" font-size=\"10\" fill=\"#79c0ff\">Strategy</text><rect x=\"445\" y=\"300\" width=\"115\" height=\"40\" rx=\"6\" fill=\"#1c2128\" stroke=\"#56d364\" stroke-width=\"1\"/><text x=\"502\" y=\"325\" text-anchor=\"middle\" class=\"m\" font-size=\"10\" fill=\"#56d364\">Factory</text><rect x=\"107\" y=\"356\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#1c2128\" stroke=\"#d2a8ff\" stroke-width=\"1\"/><text x=\"167\" y=\"381\" text-anchor=\"middle\" class=\"m\" font-size=\"10\" fill=\"#d2a8ff\">Decorator</text><rect x=\"242\" y=\"356\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#1c2128\" stroke=\"#f8d37d\" stroke-width=\"1\"/><text x=\"302\" y=\"381\" text-anchor=\"middle\" class=\"m\" font-size=\"10\" fill=\"#f8d37d\">Pub/Sub</text><rect x=\"377\" y=\"356\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#1c2128\" stroke=\"#ff7b72\" stroke-width=\"1\"/><text x=\"437\" y=\"381\" text-anchor=\"middle\" class=\"m\" font-size=\"10\" fill=\"#ff7b72\">Adapter</text><text x=\"576\" y=\"408\" text-anchor=\"end\" class=\"m\" font-size=\"10\" fill=\"#64748b\">12 min lectura</text><text x=\"576\" y=\"394\" text-anchor=\"end\" class=\"m\" font-size=\"10\" fill=\"#d2a8ff\">POO · Patrones</text></svg>",
+  "vlabel": "// POO · herencia · patrones · mixins",
+  "title": "POO y Patrones de Diseño",
+  "title_accent": "aplicados a LitElement",
+  "excerpt": "Los 4 pilares de la Programación Orientada a Objetos y 7 patrones de diseño explicados con analogías y conectados a ejemplos reales de LitElement. Singleton, Observer, Pub/Sub, Strategy, Factory, Decorator y Adapter.",
+  "toc": [
+    {
+      "id": "cuatro-pilares",
+      "label": "Los 4 pilares de POO"
+    },
+    {
+      "id": "herencia",
+      "label": "Herencia"
+    },
+    {
+      "id": "encapsulacion",
+      "label": "Encapsulación"
+    },
+    {
+      "id": "polimorfismo",
+      "label": "Polimorfismo"
+    },
+    {
+      "id": "solid-srp",
+      "label": "Principios SOLID"
+    },
+    {
+      "id": "mixins",
+      "label": "Mixins: composición sin herencia"
+    },
+    {
+      "id": "patrones-intro",
+      "label": "Patrones de diseño"
+    },
+    {
+      "id": "singleton",
+      "label": "Singleton"
+    },
+    {
+      "id": "observer-pubsub",
+      "label": "Observer y Pub/Sub"
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy"
+    },
+    {
+      "id": "factory",
+      "label": "Factory Method"
+    },
+    {
+      "id": "decorator-adapter",
+      "label": "Decorator y Adapter"
+    }
+  ],
+  "body": [
+    {
+      "type": "lede",
+      "text": "LitElement está construido sobre Programación Orientada a Objetos. Cada componente es una clase. Cada propiedad reactiva es encapsulación. Cada override de <code>render()</code> es polimorfismo. Entender POO no es teoría abstracta — es entender por qué LitElement funciona como funciona."
+    },
+    {
+      "type": "h2",
+      "id": "cuatro-pilares",
+      "n": "01",
+      "text": "Los 4 pilares de POO"
+    },
+    {
+      "type": "p",
+      "text": "La Programación Orientada a Objetos organiza el código en objetos que combinan estado y comportamiento. Sus cuatro pilares son abstracción (modelar entidades reales), encapsulación (ocultar detalles internos), herencia (reutilizar comportamiento) y polimorfismo (misma interfaz, diferente comportamiento). En LitElement los cuatro están presentes en cada componente."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "poo-en-litelement.js",
+      "lines": [
+        "class MiBoton extends LitElement {    // <- HERENCIA",
+        "",
+        "  // ENCAPSULACION: estado interno protegido",
+        "  static properties = {",
+        "    label: { type: String },",
+        "  };",
+        "  #clicks = 0;  // campo privado",
+        "",
+        "  // POLIMORFISMO: override del metodo render()",
+        "  render() {",
+        "    return html`<button @click=${this._inc}>${this.label}</button>`;",
+        "  }",
+        "",
+        "  _inc() { this.#clicks++; }",
+        "}",
+        "",
+        "// ABSTRACCION: el componente modela 'un boton' del mundo real"
+      ]
+    },
+    {
+      "type": "h2",
+      "id": "herencia",
+      "n": "02",
+      "text": "Herencia"
+    },
+    {
+      "type": "p",
+      "text": "La herencia permite que una clase hijo reutilice propiedades y métodos de una clase padre, evitando duplicar código. En JavaScript se declara con <code>extends</code>. LitElement usa herencia simple (solo un padre), pero la cadena puede extenderse: <code>HTMLElement → LitElement → ComponenteBase → ComponenteEspecifico</code>."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "herencia.js",
+      "lines": [
+        "class Animal {",
+        "  constructor(nombre) {",
+        "    this.nombre = nombre;",
+        "  }",
+        "  hablar() {",
+        "    return `${this.nombre} hace un sonido`;",
+        "  }",
+        "}",
+        "",
+        "class Perro extends Animal {",
+        "  hablar() {",
+        "    return `${this.nombre} ladra: Guau!`;  // override",
+        "  }",
+        "  buscar() {",
+        "    return `${this.nombre} busca la pelota`;  // metodo nuevo",
+        "  }",
+        "}",
+        "",
+        "// Cadena en LitElement:",
+        "// HTMLElement -> LitElement -> MiBoton"
+      ]
+    },
+    {
+      "type": "callout",
+      "kind": "warning",
+      "title": "JavaScript solo permite herencia simple",
+      "text": "Una clase solo puede extender una clase padre. Si necesitas que un componente herede comportamiento de múltiples fuentes, la solución son los <strong>Mixins</strong> — los veremos más adelante."
+    },
+    {
+      "type": "h2",
+      "id": "encapsulacion",
+      "n": "03",
+      "text": "Encapsulación"
+    },
+    {
+      "type": "p",
+      "text": "La encapsulación oculta los detalles internos de un objeto y expone solo la interfaz pública necesaria. En JavaScript moderno se logra con campos privados (<code>#campo</code>). En LitElement tiene una segunda capa: el Shadow DOM encapsula el HTML y CSS del componente, haciéndolos inaccesibles desde <code>document.querySelector</code> y bloqueando estilos externos."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "encapsulacion.js",
+      "lines": [
+        "class CuentaBancaria {",
+        "  #saldo = 0;       // privado — nadie accede directamente",
+        "  #historial = [];  // privado",
+        "",
+        "  depositar(cantidad) {",
+        "    if (cantidad > 0) {",
+        "      this.#saldo += cantidad;",
+        "      this.#historial.push(`+${cantidad}`);",
+        "    }",
+        "  }",
+        "",
+        "  get saldo() { return this.#saldo; }  // interfaz publica",
+        "}",
+        "",
+        "const cuenta = new CuentaBancaria();",
+        "cuenta.depositar(1000);",
+        "cuenta.#saldo;   // Error: campo privado",
+        "cuenta.saldo;    // 1000  (getter publico)"
+      ]
+    },
+    {
+      "type": "callout",
+      "kind": "success",
+      "title": "Shadow DOM = encapsulación del DOM",
+      "text": "El Shadow DOM es encapsulación aplicada al navegador. El HTML interno del componente no es accesible con <code>document.querySelector</code>. Los estilos CSS no se filtran hacia afuera ni entran del exterior — salvo las CSS custom properties, que sí atraviesan la barrera."
+    },
+    {
+      "type": "h2",
+      "id": "polimorfismo",
+      "n": "04",
+      "text": "Polimorfismo"
+    },
+    {
+      "type": "p",
+      "text": "Polimorfismo significa 'misma interfaz, diferente comportamiento'. Una función puede trabajar con objetos de distintas clases siempre que compartan la misma interfaz (mismo nombre de método). En LitElement, <code>render()</code> es el ejemplo perfecto: cada componente lo sobreescribe con su propia implementación, pero el ciclo de vida de Lit siempre lo llama de la misma manera."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "polimorfismo.js",
+      "lines": [
+        "class BaseCard extends LitElement {",
+        "  render() {",
+        "    return html`<div class='card'><slot></slot></div>`;",
+        "  }",
+        "}",
+        "",
+        "class AlertCard extends BaseCard {",
+        "  render() {  // override — diferente comportamiento",
+        "    return html`<div class='card alert'>",
+        "      <span>Warning</span><slot></slot>",
+        "    </div>`;",
+        "  }",
+        "}",
+        "",
+        "class SuccessCard extends BaseCard {",
+        "  render() {",
+        "    return html`<div class='card success'>",
+        "      <span>OK</span><slot></slot>",
+        "    </div>`;",
+        "  }",
+        "}",
+        "",
+        "// Lit llama render() de la misma forma en todos:",
+        "// el comportamiento cambia segun la clase"
+      ]
+    },
+    {
+      "type": "h2",
+      "id": "solid-srp",
+      "n": "05",
+      "text": "Principios SOLID"
+    },
+    {
+      "type": "p",
+      "text": "SOLID es un conjunto de 5 principios que guían el diseño de clases mantenibles y extensibles. El más frecuente en el examen es el <strong>SRP — Single Responsibility Principle</strong>: cada clase debe tener una única razón para cambiar. No significa que solo haga 'una cosa', sino que solo un actor del sistema debería pedirle cambios."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "solid-srp.js",
+      "lines": [
+        "// MAL — viola SRP: 3 razones para cambiar (RH, IT, BD)",
+        "class Reporte {",
+        "  calcularSalario()      { /* RH lo pide */ }",
+        "  formatearPDF()         { /* IT lo pide */ }",
+        "  guardarEnBaseDeDatos() { /* BD lo pide */ }",
+        "}",
+        "",
+        "// BIEN — SRP: una responsabilidad por clase",
+        "class CalculadoraSalario  { calcular()   { /* solo RH */ } }",
+        "class FormateadorReporte  { toPDF()      { /* solo IT */ } }",
+        "class ReporteRepository   { guardar()    { /* solo BD */ } }"
+      ]
+    },
+    {
+      "type": "callout",
+      "kind": "warning",
+      "title": "SOLID en el examen — las 5 letras",
+      "text": "<strong>S</strong> — Single Responsibility: una razón para cambiar. <strong>O</strong> — Open/Closed: abierta para extender, cerrada para modificar. <strong>L</strong> — Liskov: subclase reemplaza al padre sin romper el programa. <strong>I</strong> — Interface Segregation: interfaces pequeñas y específicas. <strong>D</strong> — Dependency Inversion: depender de abstracciones, no de concretos."
+    },
+    {
+      "type": "h2",
+      "id": "mixins",
+      "n": "06",
+      "text": "Mixins: composición sin herencia"
+    },
+    {
+      "type": "p",
+      "text": "Cuando una clase necesita comportamiento de múltiples fuentes pero JavaScript solo permite herencia simple, los Mixins son la solución. Un mixin es una <strong>función que recibe una clase y devuelve una clase extendida</strong> con comportamiento adicional. Se pueden apilar y combinar libremente, y LitElement los usa extensamente para compartir lógica entre componentes sin duplicar código."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "mixins.js",
+      "lines": [
+        "// Un mixin es una funcion que recibe Base y devuelve clase extendida",
+        "const Volador = (Base) => class extends Base {",
+        "  volar() { console.log(`${this.nombre} vuela`); }",
+        "};",
+        "",
+        "const Nadador = (Base) => class extends Base {",
+        "  nadar() { console.log(`${this.nombre} nada`); }",
+        "};",
+        "",
+        "class Animal { constructor(n) { this.nombre = n; } }",
+        "",
+        "// Apilar mixins: Pato hereda de Volador(Nadador(Animal))",
+        "class Pato extends Volador(Nadador(Animal)) { }",
+        "",
+        "const donald = new Pato('Donald');",
+        "donald.volar();  // Donald vuela",
+        "donald.nadar();  // Donald nada",
+        "",
+        "// En LitElement:",
+        "const FormMixin = (Base) => class extends Base {",
+        "  validar() { return this.value !== ''; }",
+        "};",
+        "",
+        "class MiInput    extends FormMixin(LitElement) { }",
+        "class MiTextarea extends FormMixin(LitElement) { }",
+        "// Ambos tienen validar() sin repetir codigo"
+      ]
+    },
+    {
+      "type": "callout",
+      "kind": "success",
+      "title": "Definición exacta para el examen",
+      "text": "Un mixin es una <strong>función que recibe una clase y devuelve una nueva clase extendida</strong> con comportamiento adicional. Permite <strong>reutilizar comportamiento entre clases que no comparten herencia directa</strong>. No se instancia directamente. Se apila con <code>ClaseA extends MixinB(MixinC(Base))</code>."
+    },
+    {
+      "type": "h2",
+      "id": "patrones-intro",
+      "n": "07",
+      "text": "Patrones de diseño"
+    },
+    {
+      "type": "p",
+      "text": "Los patrones de diseño son soluciones probadas a problemas recurrentes en el diseño de software orientado a objetos. No son código que se copia — son plantillas conceptuales. Los del examen se dividen en creacionales (cómo se crean objetos), estructurales (cómo se organizan) y de comportamiento (cómo se comunican)."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "mapa-patrones.js",
+      "lines": [
+        "// Mapa rapido — cuando el examen dice... usa...",
+        "// 'unica instancia global'              -> Singleton",
+        "// 'notifica a observadores directamente' -> Observer",
+        "// 'broker intermediario, no se conocen'  -> Pub/Sub",
+        "// 'algoritmos intercambiables'           -> Strategy",
+        "// 'crear objetos sin saber la clase'     -> Factory Method",
+        "// 'agregar funcionalidad sin modificar'  -> Decorator",
+        "// 'adaptar interfaz incompatible'        -> Adapter"
+      ]
+    },
+    {
+      "type": "h2",
+      "id": "singleton",
+      "n": "08",
+      "text": "Singleton"
+    },
+    {
+      "type": "p",
+      "text": "El Singleton garantiza que una clase tenga <strong>una única instancia</strong> en toda la aplicación, con un punto de acceso global. Es como el presidente de un país: solo puede haber uno. Si intentas crear otro, el método te devuelve la instancia ya existente."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "singleton.js",
+      "lines": [
+        "class ConfiguracionApp {",
+        "  static #instancia = null;  // privada, compartida por la clase",
+        "",
+        "  constructor() {",
+        "    this.tema = 'oscuro';",
+        "    this.idioma = 'es';",
+        "  }",
+        "",
+        "  static getInstance() {",
+        "    if (!ConfiguracionApp.#instancia) {",
+        "      ConfiguracionApp.#instancia = new ConfiguracionApp();",
+        "    }",
+        "    return ConfiguracionApp.#instancia;  // siempre la misma",
+        "  }",
+        "}",
+        "",
+        "const config1 = ConfiguracionApp.getInstance();",
+        "const config2 = ConfiguracionApp.getInstance();",
+        "console.log(config1 === config2);  // true — misma instancia",
+        "config1.tema = 'claro';",
+        "console.log(config2.tema);  // 'claro' — son el mismo objeto"
+      ]
+    },
+    {
+      "type": "callout",
+      "kind": "warning",
+      "title": "Clave del examen: Singleton",
+      "text": "\"Única instancia global accesible mediante un método estático\" → Singleton. Se usa para: configuración global, conexión a base de datos (una sola activa), logger centralizado."
+    },
+    {
+      "type": "h2",
+      "id": "observer-pubsub",
+      "n": "09",
+      "text": "Observer y Pub/Sub"
+    },
+    {
+      "type": "p",
+      "text": "Son los dos patrones de notificación más confundidos en el examen. La diferencia clave es si hay o no un intermediario. En <strong>Observer</strong>, el Subject mantiene una lista de Observers y los notifica directamente. En <strong>Pub/Sub</strong>, hay un broker — quienes publican y quienes escuchan no se conocen entre sí."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "observer.js",
+      "lines": [
+        "// OBSERVER — comunicacion directa (como addEventListener)",
+        "class Jefe {",
+        "  constructor() { this.empleados = []; }",
+        "  registrar(e)    { this.empleados.push(e); }",
+        "  notificar(msg)  { this.empleados.forEach(e => e.recibir(msg)); }",
+        "}",
+        "",
+        "class Empleado {",
+        "  constructor(nombre) { this.nombre = nombre; }",
+        "  recibir(msg) { console.log(`${this.nombre}: ${msg}`); }",
+        "}",
+        "",
+        "const jefe = new Jefe();",
+        "jefe.registrar(new Empleado('Ana'));",
+        "jefe.notificar('No hay trabajo manana');",
+        "// Ana: No hay trabajo manana"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "pubsub.js",
+      "lines": [
+        "// PUB/SUB — hay un broker, no se conocen entre si",
+        "class Broker {",
+        "  constructor() { this.suscriptores = {}; }",
+        "  suscribir(tema, fn) {",
+        "    if (!this.suscriptores[tema]) this.suscriptores[tema] = [];",
+        "    this.suscriptores[tema].push(fn);",
+        "  }",
+        "  publicar(tema, datos) {",
+        "    (this.suscriptores[tema] || []).forEach(fn => fn(datos));",
+        "  }",
+        "}",
+        "",
+        "const broker = new Broker();",
+        "broker.suscribir('noticias', msg => console.log('Lector1:', msg));",
+        "broker.suscribir('noticias', msg => console.log('Lector2:', msg));",
+        "broker.publicar('noticias', 'Real Madrid gano 3-0');",
+        "// El periodista no sabe quienes leen. Los lectores no saben quién escribe."
+      ]
+    },
+    {
+      "type": "callout",
+      "kind": "warning",
+      "title": "Observer vs Pub/Sub — la diferencia del examen",
+      "text": "<strong>Observer</strong>: el Subject conoce a sus Observers, comunicación directa, sin intermediario. Ejemplo: <code>addEventListener</code>. <strong>Pub/Sub</strong>: hay un broker, los actores son anónimos entre sí, totalmente desacoplados. Ejemplo: Kafka, Redis, chat con servidor central. Las palabras clave del examen: 'broker', 'intermediario', 'no se conocen', 'canal', 'topic' → Pub/Sub."
+    },
+    {
+      "type": "h2",
+      "id": "strategy",
+      "n": "10",
+      "text": "Strategy"
+    },
+    {
+      "type": "p",
+      "text": "El patrón Strategy encapsula una familia de algoritmos intercambiables y permite cambiar el algoritmo en tiempo de ejecución sin modificar el código cliente. Es como los métodos de pago en una tienda: el proceso de cobrar es el mismo, pero el <em>cómo</em> paga el cliente cambia."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "strategy.js",
+      "lines": [
+        "// Las 'estrategias' — algoritmos intercambiables",
+        "class PagoTarjeta  { pagar(m) { return `Pagado $${m} con tarjeta`; } }",
+        "class PagoPaypal   { pagar(m) { return `Pagado $${m} con PayPal`; } }",
+        "class PagoEfectivo { pagar(m) { return `Pagado $${m} en efectivo`; } }",
+        "",
+        "// El 'contexto' — usa la estrategia actual",
+        "class Tienda {",
+        "  constructor(estrategia) { this.estrategia = estrategia; }",
+        "  cambiar(estrategia) { this.estrategia = estrategia; }",
+        "  cobrar(monto) { return this.estrategia.pagar(monto); }",
+        "}",
+        "",
+        "const tienda = new Tienda(new PagoTarjeta());",
+        "tienda.cobrar(100);  // Pagado $100 con tarjeta",
+        "tienda.cambiar(new PagoPaypal());",
+        "tienda.cobrar(50);   // Pagado $50 con PayPal"
+      ]
+    },
+    {
+      "type": "callout",
+      "kind": "warning",
+      "title": "Clave del examen: Strategy",
+      "text": "'Encapsula familia de algoritmos e intercambiarlos en tiempo de ejecución' → Strategy (no Observer). La clave diferenciadora: los algoritmos son intercambiables y el cambio ocurre en runtime sin tocar el código del contexto."
+    },
+    {
+      "type": "h2",
+      "id": "factory",
+      "n": "11",
+      "text": "Factory Method"
+    },
+    {
+      "type": "p",
+      "text": "El Factory Method define una interfaz para crear objetos, pero deja que la lógica decida qué clase concreta instanciar. El cliente pide un objeto sin saber ni importarle exactamente qué clase se construye internamente. Es la fábrica que recibe 'quiero un animal' y decide si te da un perro, un gato o un pájaro."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "factory.js",
+      "lines": [
+        "class Perro   { hablar() { return 'Guau!'; } }",
+        "class Gato    { hablar() { return 'Miau!'; } }",
+        "class Pajaro  { hablar() { return 'Pio!';  } }",
+        "",
+        "// La FABRICA — el cliente no sabe que clase se instancia",
+        "function fabricaAnimal(tipo) {",
+        "  const animales = { perro: Perro, gato: Gato, pajaro: Pajaro };",
+        "  const Clase = animales[tipo];",
+        "  if (!Clase) throw new Error(`Tipo desconocido: ${tipo}`);",
+        "  return new Clase();  // el cliente no ve este detalle",
+        "}",
+        "",
+        "const a1 = fabricaAnimal('perro');",
+        "const a2 = fabricaAnimal('gato');",
+        "a1.hablar();  // Guau!",
+        "a2.hablar();  // Miau!"
+      ]
+    },
+    {
+      "type": "callout",
+      "kind": "warning",
+      "title": "Clave del examen: Factory Method",
+      "text": "'Crear objetos sin especificar la clase exacta' → Factory Method. El cliente solo indica qué tipo necesita; la fábrica decide qué clase concreta construir. Diferencia con Prototype: Prototype clona objetos existentes; Factory crea instancias nuevas."
+    },
+    {
+      "type": "h2",
+      "id": "decorator-adapter",
+      "n": "12",
+      "text": "Decorator y Adapter"
+    },
+    {
+      "type": "p",
+      "text": "El <strong>Decorator</strong> agrega funcionalidad a un objeto de forma dinámica, envolviéndolo sin modificar su clase original — como personalizar un café base añadiéndole leche, azúcar o canela. El <strong>Adapter</strong> traduce la interfaz de una clase existente a la interfaz que espera el cliente — como un adaptador de corriente que convierte un enchufe de 3 patas a uno de 2 hoyos."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "decorator.js",
+      "lines": [
+        "// DECORATOR — agrega funcionalidad envolviendola",
+        "class Cafe { costo() { return 10; } desc() { return 'Cafe'; } }",
+        "",
+        "class ConLeche {",
+        "  constructor(cafe) { this.cafe = cafe; }",
+        "  costo() { return this.cafe.costo() + 5; }",
+        "  desc()  { return this.cafe.desc() + ' + leche'; }",
+        "}",
+        "",
+        "class ConAzucar {",
+        "  constructor(cafe) { this.cafe = cafe; }",
+        "  costo() { return this.cafe.costo() + 2; }",
+        "  desc()  { return this.cafe.desc() + ' + azucar'; }",
+        "}",
+        "",
+        "let miCafe = new ConAzucar(new ConLeche(new Cafe()));",
+        "miCafe.desc();   // 'Cafe + leche + azucar'",
+        "miCafe.costo();  // 17"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "adapter.js",
+      "lines": [
+        "// ADAPTER — traduce interfaces incompatibles",
+        "class SistemaViejo {",
+        "  obtenerDatos() {",
+        "    return { nombre: 'Alberto', edad: 25 };  // formato viejo",
+        "  }",
+        "}",
+        "",
+        "// El cliente nuevo espera: getData() -> { name, age }",
+        "class AdaptadorSistema {",
+        "  constructor(sistema) { this.sistema = sistema; }",
+        "  getData() {",
+        "    const d = this.sistema.obtenerDatos();  // llama al viejo",
+        "    return { name: d.nombre, age: d.edad }; // traduce formato",
+        "  }",
+        "}",
+        "",
+        "const adaptador = new AdaptadorSistema(new SistemaViejo());",
+        "adaptador.getData();  // { name: 'Alberto', age: 25 }"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Singleton: presidente del país. Observer: jefe que llama directo. Pub/Sub: periódico con suscriptores. Strategy: métodos de pago. Factory: fábrica de animales. Decorator: café personalizado. Adapter: enchufe de viaje.",
+      "cite": "Mapa de analogías — 7 patrones"
+    }
+  ]
+}

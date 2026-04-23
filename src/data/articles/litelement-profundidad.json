@@ -1,0 +1,495 @@
+{
+  "id": "litelement-profundidad",
+  "slug": "litelement-en-profundidad",
+  "category": "cs",
+  "published_at": "2026-04-23",
+  "updated_at": null,
+  "read_minutes": 10,
+  "related_ids": [
+    "javascript-esencial",
+    "poo-patrones-litelement"
+  ],
+  "featured": false,
+  "featured_svg": "<svg viewBox=\"0 0 600 420\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"lb\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#0d1117\"/><stop offset=\"100%\" stop-color=\"#07090f\"/></linearGradient><linearGradient id=\"lbd\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#00e5c8\" stop-opacity=\"0.5\"/><stop offset=\"100%\" stop-color=\"#ffa657\" stop-opacity=\"0.5\"/></linearGradient><marker id=\"arr3\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L8,3 z\" fill=\"#8b949e\"/></marker><style>.m{font-family:'JetBrains Mono','Fira Code',monospace}</style></defs><rect width=\"600\" height=\"420\" fill=\"url(#lb)\" rx=\"12\"/><rect width=\"598\" height=\"418\" x=\"1\" y=\"1\" fill=\"none\" stroke=\"url(#lbd)\" stroke-width=\"1\" rx=\"11\" opacity=\"0.6\"/><rect x=\"245\" y=\"24\" width=\"110\" height=\"32\" rx=\"16\" fill=\"#1a3c2a\" stroke=\"#00e5c8\" stroke-width=\"1.5\"/><text x=\"300\" y=\"45\" text-anchor=\"middle\" class=\"m\" font-size=\"11\" fill=\"#00e5c8\">constructor()</text><line x1=\"300\" y1=\"56\" x2=\"300\" y2=\"76\" stroke=\"#8b949e\" stroke-width=\"1\" marker-end=\"url(#arr3)\"/><rect x=\"225\" y=\"76\" width=\"150\" height=\"32\" rx=\"6\" fill=\"#1c2128\" stroke=\"#58a6ff\" stroke-width=\"1\"/><text x=\"300\" y=\"97\" text-anchor=\"middle\" class=\"m\" font-size=\"11\" fill=\"#58a6ff\">connectedCallback()</text><line x1=\"300\" y1=\"108\" x2=\"300\" y2=\"128\" stroke=\"#8b949e\" stroke-width=\"1\" marker-end=\"url(#arr3)\"/><rect x=\"225\" y=\"128\" width=\"150\" height=\"32\" rx=\"6\" fill=\"#1c2128\" stroke=\"#ffa657\" stroke-width=\"1\"/><text x=\"300\" y=\"149\" text-anchor=\"middle\" class=\"m\" font-size=\"11\" fill=\"#ffa657\">requestUpdate()</text><line x1=\"300\" y1=\"160\" x2=\"300\" y2=\"180\" stroke=\"#8b949e\" stroke-width=\"1\" marker-end=\"url(#arr3)\"/><rect x=\"225\" y=\"180\" width=\"150\" height=\"32\" rx=\"6\" fill=\"#1c2128\" stroke=\"#d2a8ff\" stroke-width=\"1\"/><text x=\"300\" y=\"201\" text-anchor=\"middle\" class=\"m\" font-size=\"11\" fill=\"#d2a8ff\">shouldUpdate()</text><line x1=\"300\" y1=\"212\" x2=\"300\" y2=\"232\" stroke=\"#8b949e\" stroke-width=\"1\" marker-end=\"url(#arr3)\"/><rect x=\"245\" y=\"232\" width=\"110\" height=\"32\" rx=\"6\" fill=\"#1a2820\" stroke=\"#56d364\" stroke-width=\"1.5\"/><text x=\"300\" y=\"253\" text-anchor=\"middle\" class=\"m\" font-size=\"11\" fill=\"#56d364\">render()</text><line x1=\"300\" y1=\"264\" x2=\"300\" y2=\"284\" stroke=\"#8b949e\" stroke-width=\"1\" marker-end=\"url(#arr3)\"/><rect x=\"40\" y=\"284\" width=\"145\" height=\"32\" rx=\"6\" fill=\"#1c2128\" stroke=\"#f8d37d\" stroke-width=\"1\"/><text x=\"112\" y=\"305\" text-anchor=\"middle\" class=\"m\" font-size=\"10\" fill=\"#f8d37d\">firstUpdated() x1</text><rect x=\"415\" y=\"284\" width=\"145\" height=\"32\" rx=\"6\" fill=\"#1c2128\" stroke=\"#79c0ff\" stroke-width=\"1\"/><text x=\"487\" y=\"305\" text-anchor=\"middle\" class=\"m\" font-size=\"10\" fill=\"#79c0ff\">updated()</text><line x1=\"300\" y1=\"264\" x2=\"112\" y2=\"284\" stroke=\"#8b949e\" stroke-width=\"1\" marker-end=\"url(#arr3)\"/><line x1=\"300\" y1=\"264\" x2=\"487\" y2=\"284\" stroke=\"#8b949e\" stroke-width=\"1\" marker-end=\"url(#arr3)\"/><rect x=\"220\" y=\"348\" width=\"160\" height=\"32\" rx=\"6\" fill=\"#3c1515\" stroke=\"#f85149\" stroke-width=\"1.5\"/><text x=\"300\" y=\"369\" text-anchor=\"middle\" class=\"m\" font-size=\"11\" fill=\"#f85149\">disconnectedCallback()</text><line x1=\"300\" y1=\"316\" x2=\"300\" y2=\"348\" stroke=\"#f85149\" stroke-width=\"1\" stroke-dasharray=\"4,3\" marker-end=\"url(#arr3)\"/><text x=\"576\" y=\"408\" text-anchor=\"end\" class=\"m\" font-size=\"10\" fill=\"#64748b\">10 min lectura</text><text x=\"576\" y=\"394\" text-anchor=\"end\" class=\"m\" font-size=\"10\" fill=\"#00e5c8\">LitElement</text></svg>",
+  "vlabel": "// lifecycle · propiedades · templates · slots · Shadow DOM",
+  "title": "LitElement en profundidad:",
+  "title_accent": "ciclo de vida, propiedades y templates",
+  "excerpt": "Deep-dive en LitElement: el estándar Web Components, el ciclo de vida completo, propiedades reactivas, todos los tipos de binding, directivas, Shadow DOM CSS y slots. Con las trampas del examen integradas.",
+  "toc": [
+    {
+      "id": "web-components",
+      "label": "Web Components: el estándar"
+    },
+    {
+      "id": "anatomia",
+      "label": "Anatomía de un componente"
+    },
+    {
+      "id": "lifecycle",
+      "label": "Ciclo de vida (Lifecycle)"
+    },
+    {
+      "id": "propiedades",
+      "label": "Propiedades reactivas"
+    },
+    {
+      "id": "templates",
+      "label": "Templates y bindings"
+    },
+    {
+      "id": "directivas",
+      "label": "Directivas"
+    },
+    {
+      "id": "shadow-css",
+      "label": "Shadow DOM CSS"
+    },
+    {
+      "id": "slots",
+      "label": "Slots y proyección de contenido"
+    }
+  ],
+  "body": [
+    {
+      "type": "lede",
+      "text": "LitElement no inventa el DOM — lo aprovecha. Es una capa delgada (~5 KB) sobre el estándar Web Components del navegador que añade un sistema reactivo, plantillas declarativas y un ciclo de vida predecible. Entender qué es estándar y qué es Lit te da el control total."
+    },
+    {
+      "type": "h2",
+      "id": "web-components",
+      "n": "01",
+      "text": "Web Components: el estándar"
+    },
+    {
+      "type": "p",
+      "text": "Web Components es un conjunto de APIs nativas del navegador que permiten crear elementos HTML personalizados con comportamiento y estilos propios. LitElement es una abstracción sobre este estándar — no un reemplazo. Los cuatro pilares del estándar son Custom Elements, Shadow DOM, HTML Templates y ES Modules."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "web-components.js",
+      "lines": [
+        "// 1. CUSTOM ELEMENTS — definir un elemento HTML personalizado",
+        "class MiElemento extends HTMLElement {",
+        "  connectedCallback() {",
+        "    this.innerHTML = '<p>Hola mundo</p>';",
+        "  }",
+        "}",
+        "customElements.define('mi-elemento', MiElemento);",
+        "// Ahora <mi-elemento></mi-elemento> funciona en el HTML",
+        "",
+        "// 2. SHADOW DOM — DOM encapsulado",
+        "class MiCard extends HTMLElement {",
+        "  constructor() {",
+        "    super();",
+        "    const shadow = this.attachShadow({ mode: 'open' });",
+        "    shadow.innerHTML = '<style>p{color:red}</style><p>Encapsulado</p>';",
+        "  }",
+        "}",
+        "",
+        "// 3. customElements Registry",
+        "customElements.get('mi-elemento');           // obtener clase",
+        "customElements.whenDefined('mi-elemento');   // esperar registro"
+      ]
+    },
+    {
+      "type": "callout",
+      "kind": "success",
+      "title": "Por qué Lit es 'ligero'",
+      "text": "LitElement pesa ~5 KB minificado porque NO tiene Virtual DOM. Usa el DOM nativo del navegador a través del estándar Web Components. Actualiza solo las partes del DOM que cambian, sin re-renderizar el árbol completo — esa es su ventaja de rendimiento."
+    },
+    {
+      "type": "h2",
+      "id": "anatomia",
+      "n": "02",
+      "text": "Anatomía de un componente"
+    },
+    {
+      "type": "p",
+      "text": "Un componente LitElement tiene cinco partes bien definidas: estilos encapsulados, propiedades reactivas, constructor, template de render y métodos. Esta estructura es siempre la misma — lo que cambia entre componentes es el contenido de cada parte."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "anatomia-componente.js",
+      "lines": [
+        "import { LitElement, html, css } from 'lit';",
+        "",
+        "class MiBoton extends LitElement {",
+        "",
+        "  // 1. ESTILOS — encapsulados en Shadow DOM",
+        "  static styles = css`",
+        "    :host { display: inline-block; }",
+        "    button { background: var(--btn-bg, blue); color: white; }",
+        "  `;",
+        "",
+        "  // 2. PROPIEDADES reactivas — disparan re-render al cambiar",
+        "  static properties = {",
+        "    label:    { type: String },",
+        "    disabled: { type: Boolean },",
+        "  };",
+        "",
+        "  // 3. CONSTRUCTOR — valores iniciales",
+        "  constructor() {",
+        "    super();  // siempre primero",
+        "    this.label    = 'Click';",
+        "    this.disabled = false;",
+        "  }",
+        "",
+        "  // 4. TEMPLATE — HTML del componente",
+        "  render() {",
+        "    return html`",
+        "      <button ?disabled=${this.disabled} @click=${this._onClick}>",
+        "        ${this.label}",
+        "      </button>",
+        "    `;",
+        "  }",
+        "",
+        "  // 5. METODOS",
+        "  _onClick() {",
+        "    this.dispatchEvent(new CustomEvent('boton-click', {",
+        "      bubbles: true, composed: true",
+        "    }));",
+        "  }",
+        "}",
+        "",
+        "customElements.define('mi-boton', MiBoton);"
+      ]
+    },
+    {
+      "type": "h2",
+      "id": "lifecycle",
+      "n": "03",
+      "text": "Ciclo de vida (Lifecycle)"
+    },
+    {
+      "type": "p",
+      "text": "El ciclo de vida de LitElement define en qué momento exacto se ejecuta cada método. El orden en el primer render es: <code>constructor()</code> → <code>connectedCallback()</code> → <code>requestUpdate()</code> → <code>shouldUpdate()</code> → <code>render()</code> → <code>firstUpdated()</code> → <code>updated()</code>. En renders posteriores se omite <code>firstUpdated()</code>."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "lifecycle.js",
+      "lines": [
+        "class MiComponente extends LitElement {",
+        "",
+        "  constructor() {",
+        "    super();               // obligatorio antes de usar this",
+        "    this.data = [];        // inicializar propiedades",
+        "    // NO acceder al DOM aqui — no esta conectado todavia",
+        "  }",
+        "",
+        "  connectedCallback() {",
+        "    super.connectedCallback();",
+        "    // El componente entro al DOM",
+        "    // Ideal para: suscripciones, fetch, event listeners",
+        "    this._timer = setInterval(() => this._tick(), 1000);",
+        "  }",
+        "",
+        "  shouldUpdate(changedProps) {",
+        "    // true -> continua el render | false -> cancela el render",
+        "    return changedProps.has('precio') && this.precio > 0;",
+        "  }",
+        "",
+        "  render() {",
+        "    return html`<div>${this.data}</div>`;  // genera el template",
+        "  }",
+        "",
+        "  firstUpdated() {",
+        "    // Solo la PRIMERA vez — el DOM ya esta disponible",
+        "    this.shadowRoot.querySelector('input')?.focus();",
+        "  }",
+        "",
+        "  updated(changedProps) {",
+        "    // Despues de CADA render — el DOM ya fue actualizado",
+        "    if (changedProps.has('userId')) {",
+        "      this._cargarDatosUsuario();",
+        "    }",
+        "  }",
+        "",
+        "  disconnectedCallback() {",
+        "    super.disconnectedCallback();",
+        "    // El componente salio del DOM — limpiar recursos",
+        "    clearInterval(this._timer);",
+        "  }",
+        "}"
+      ]
+    },
+    {
+      "type": "callout",
+      "kind": "error",
+      "title": "requestUpdate() es asíncrono — trampa frecuente del examen",
+      "text": "<code>requestUpdate()</code> NO renderiza de inmediato. Agenda el render en la cola de microtareas (microtask queue). El componente agrupa todos los cambios del ciclo actual en un solo render. Asignar <code>this.valor = 42</code> antes de <code>appendChild()</code> no renderiza hasta que el elemento esté en el DOM y el microtask se libere."
+    },
+    {
+      "type": "callout",
+      "kind": "warning",
+      "title": "firstUpdated() vs updated() — orden del primer render",
+      "text": "El orden es: <code>render()</code> → <code>firstUpdated()</code> → <code>updated()</code>. El error clásico: creer que <code>updated()</code> ocurre ANTES del render. 'Updated' significa 'el DOM ya fue actualizado'. <code>firstUpdated()</code> ocurre solo una vez, <code>updated()</code> ocurre en cada re-render."
+    },
+    {
+      "type": "h2",
+      "id": "propiedades",
+      "n": "04",
+      "text": "Propiedades reactivas"
+    },
+    {
+      "type": "p",
+      "text": "Una propiedad reactiva es una propiedad de clase que, cuando cambia, dispara automáticamente el ciclo de actualización de LitElement. Se declaran en <code>static properties</code> con su tipo y opciones. Cuando el valor cambia, Lit lo detecta y agenda un re-render. Para objetos y arrays, la detección es por referencia, no por contenido."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "propiedades-reactivas.js",
+      "lines": [
+        "static properties = {",
+        "  // Tipos basicos",
+        "  nombre:  { type: String },",
+        "  edad:    { type: Number },",
+        "  activo:  { type: Boolean },",
+        "  lista:   { type: Array },",
+        "  config:  { type: Object },",
+        "",
+        "  // reflect: true — sincroniza la propiedad JS con el atributo HTML",
+        "  // util para CSS: mi-boton[disabled] { opacity: 0.5 }",
+        "  disabled: { type: Boolean, reflect: true },",
+        "",
+        "  // state: true — estado interno, no observable desde fuera",
+        "  _contadorInterno: { state: true },",
+        "",
+        "  // hasChanged personalizado — control fino de re-renders",
+        "  datos: {",
+        "    type: Object,",
+        "    hasChanged(newVal, oldVal) {",
+        "      return newVal?.id !== oldVal?.id;  // solo si cambia el ID",
+        "    }",
+        "  }",
+        "};"
+      ]
+    },
+    {
+      "type": "callout",
+      "kind": "error",
+      "title": "Arrays y objetos: detección por referencia",
+      "text": "LitElement compara con <code>===</code>. <code>this.lista.push(x)</code> no cambia la referencia del array — Lit no re-renderiza. La solución: siempre crea una nueva referencia. <code>this.lista = [...this.lista, x]</code> crea un array nuevo → Lit detecta el cambio → render."
+    },
+    {
+      "type": "h2",
+      "id": "templates",
+      "n": "05",
+      "text": "Templates y bindings"
+    },
+    {
+      "type": "p",
+      "text": "LitElement usa tagged template literals (<code>html\\`...\\`</code>) para definir el DOM del componente. El sistema de bindings tiene cuatro sintaxis, cada una con un significado específico: interpolación normal para contenido, atributos dinámicos, propiedades JS con punto, booleanos con interrogación, y eventos con arroba."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "bindings.js",
+      "lines": [
+        "render() {",
+        "  return html`",
+        "    <!-- CONTENIDO: texto, HTML o expresiones JS -->",
+        "    <p>${this.texto}</p>",
+        "    <p>${this.activo ? html`<b>activo</b>` : 'inactivo'}</p>",
+        "",
+        "    <!-- ATRIBUTOS: valor como string -->",
+        "    <div class=${this.clase} id=${this.id}></div>",
+        "",
+        "    <!-- PROPIEDADES JS (con punto): pasa objetos/arrays sin serializar -->",
+        "    <input .value=${this.valor}>",
+        "    <mi-comp .datos=${this.objetoComplejo}></mi-comp>",
+        "",
+        "    <!-- BOOLEANOS (con ?): true=atributo presente, false=ausente -->",
+        "    <button ?disabled=${this.desactivado}>Click</button>",
+        "    <input ?readonly=${this.soloLectura}>",
+        "",
+        "    <!-- EVENTOS (con @): registra event listeners -->",
+        "    <button @click=${this._manejarClick}>Enviar</button>",
+        "    <input @input=${this._alEscribir} @change=${this._alCambiar}>",
+        "  `;",
+        "}"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "listas.js",
+      "lines": [
+        "// Listas con map() — forma estandar",
+        "render() {",
+        "  return html`",
+        "    <ul>",
+        "      ${this.items.map(item => html`",
+        "        <li data-id=${item.id}>${item.nombre}</li>",
+        "      `)}",
+        "    </ul>",
+        "  `;",
+        "}"
+      ]
+    },
+    {
+      "type": "h2",
+      "id": "directivas",
+      "n": "06",
+      "text": "Directivas"
+    },
+    {
+      "type": "p",
+      "text": "Las directivas son funciones especiales de Lit que extienden las capacidades del sistema de templates. Las más útiles son <code>repeat</code> para listas con clave (optimiza el diffing), <code>classMap</code> para clases condicionales y <code>styleMap</code> para estilos dinámicos."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "directivas.js",
+      "lines": [
+        "import { repeat   } from 'lit/directives/repeat.js';",
+        "import { classMap } from 'lit/directives/class-map.js';",
+        "import { styleMap } from 'lit/directives/style-map.js';",
+        "",
+        "render() {",
+        "  return html`",
+        "    <!-- repeat: lista con key — Lit reutiliza nodos DOM -->",
+        "    <ul>",
+        "      ${repeat(",
+        "        this.items,",
+        "        item => item.id,",
+        "        item => html`<li>${item.nombre}</li>`",
+        "      )}",
+        "    </ul>",
+        "",
+        "    <!-- classMap: clases condicionales -->",
+        "    <div class=${classMap({",
+        "      activo: this.activo,",
+        "      error:  this.hayError,",
+        "      grande: this.size === 'lg',",
+        "    })}>",
+        "",
+        "    <!-- styleMap: estilos dinamicos -->",
+        "    <div style=${styleMap({",
+        "      color:    this.color,",
+        "      fontSize: this.tamano + 'px',",
+        "    })}>",
+        "  `;",
+        "}"
+      ]
+    },
+    {
+      "type": "h2",
+      "id": "shadow-css",
+      "n": "07",
+      "text": "Shadow DOM CSS"
+    },
+    {
+      "type": "p",
+      "text": "El Shadow DOM encapsula los estilos: los estilos externos no entran, los internos no salen. Pero hay excepciones importantes que el examen evalúa: las CSS custom properties (variables) sí atraviesan, y <code>::part()</code> permite que el exterior estile partes específicas que el componente decide exponer."
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "file": "shadow-dom-css.css",
+      "lines": [
+        "/* :host — estila el componente desde dentro */",
+        ":host {",
+        "  display: block;",
+        "  color: navy;",
+        "}",
+        "",
+        "/* :host([attr]) — host con condicion */",
+        ":host([disabled]) {",
+        "  opacity: 0.5;",
+        "  pointer-events: none;",
+        "}",
+        "",
+        "/* :host-context — host dentro de un contexto externo */",
+        ":host-context(.tema-oscuro) {",
+        "  background: #333;",
+        "  color: white;",
+        "}",
+        "",
+        "/* ::slotted — estila el contenido proyectado desde el slot */",
+        "::slotted(p)  { color: red; margin: 0; }",
+        "::slotted(*)  { font-family: sans-serif; }"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "css-part.js",
+      "lines": [
+        "// Dentro del componente — exponer una 'parte' estilizable",
+        "render() {",
+        "  return html`<button part='boton'>Click</button>`;",
+        "}",
+        "",
+        "/* Desde CSS externo — estilar la parte expuesta */",
+        "mi-componente::part(boton) {",
+        "  background: red;  /* entra al Shadow DOM via ::part() */",
+        "}"
+      ]
+    },
+    {
+      "type": "callout",
+      "kind": "warning",
+      "title": "Qué cruza el Shadow DOM y qué no",
+      "text": "<strong>No entran:</strong> reglas CSS normales (selectores, clases, IDs externos). <strong>Sí entran:</strong> CSS custom properties (variables) por herencia en cascada, y <code>::part()</code> que permite estilar partes expuestas explícitamente por el componente."
+    },
+    {
+      "type": "h2",
+      "id": "slots",
+      "n": "08",
+      "text": "Slots y proyección de contenido"
+    },
+    {
+      "type": "p",
+      "text": "Los slots permiten que el contenido definido fuera del componente se proyecte dentro de su template. Es como los huecos de un molde: el componente define dónde va el contenido, y quien lo usa rellena esos huecos. Pueden ser nombrados (para múltiples zonas) o por defecto (para el contenido principal)."
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "slots.js",
+      "lines": [
+        "// Definicion del componente con slots",
+        "class MiCard extends LitElement {",
+        "  render() {",
+        "    return html`",
+        "      <div class='card'>",
+        "        <header>",
+        "          <slot name='header'></slot>  <!-- slot nombrado -->",
+        "        </header>",
+        "        <main>",
+        "          <slot></slot>                <!-- slot por defecto -->",
+        "        </main>",
+        "        <footer>",
+        "          <slot name='footer'></slot>  <!-- slot nombrado -->",
+        "        </footer>",
+        "      </div>",
+        "    `;",
+        "  }",
+        "}"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "file": "slots-uso.html",
+      "lines": [
+        "<!-- Uso del componente — el contenido se proyecta en los slots -->",
+        "<mi-card>",
+        "  <h2 slot='header'>Titulo de la tarjeta</h2>",
+        "",
+        "  <!-- sin atributo slot -> va al slot por defecto -->",
+        "  <p>Este es el contenido principal de la tarjeta.</p>",
+        "",
+        "  <span slot='footer'>Fecha: Abril 2026</span>",
+        "</mi-card>"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "LitElement no es un framework que te abstrae del DOM — es una herramienta que te lo explica. Cuando entiendes el estándar Web Components, LitElement se vuelve obvio.",
+      "cite": "Lit Documentation"
+    }
+  ]
+}

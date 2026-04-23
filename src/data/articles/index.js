@@ -11,10 +11,5 @@
 
 import diagramasDeFlujo from './diagramas-de-flujo.json';
 import operacionTerminal from './operacion-terminal.json';
-
-export const articles = [
-  diagramasDeFlujo,
-  operacionTerminal,
-];
-
-export default articles;
+import javascriptEsencial from './javascript-esencial.json';
+import pooPatrones from './poo-patro
