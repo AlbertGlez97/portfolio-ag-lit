@@ -313,7 +313,7 @@
     },
     {
       "type": "p",
-      "text": "El enunciado es <strong>idéntico</strong> al ejercicio anterior: alta en DATOS.DAT, mismos campos, misma lógica. Lo que cambia son las trampas en los diagramas incorrectos. El examen reutiliza el mismo problema con errores diferentes para ver si realmente entiendes el flujo o solo memorizaste una respuesta."
+      "text": "El enunciado es <strong>idéntico</strong> al ejercicio anterior: alta en DATOS.DAT, mismos campos, misma lógica. Lo que cambia son las trampas en los diagramas incorrectos. Es común ver el mismo problema con errores diferentes para ver si realmente entiendes el flujo o solo memorizaste una respuesta."
     },
     {
       "type": "callout",
@@ -512,7 +512,7 @@
     },
     {
       "type": "p",
-      "text": "Cuando el examen te presenta varios diagramas y tienes que elegir el correcto, no analices todo — localiza los puntos criticos primero y descarta rapido:"
+      "text": "Cuando te presentan varios diagramas y tienes que elegir el correcto, no analices todo — localiza los puntos criticos primero y descarta rapido:"
     },
     {
       "type": "callout",

@@ -48,7 +48,7 @@
   "body": [
     {
       "type": "lede",
-      "text": "LitElement no es magia. Es JavaScript moderno bien usado. Antes de entender cómo funciona un componente reactivo, necesitas dominar el lenguaje que lo sostiene: clases ES6, módulos, template literals, async/await, y las estructuras de datos que el examen pone a prueba."
+      "text": "LitElement no es magia. Es JavaScript moderno bien usado. Antes de entender cómo funciona un componente reactivo, necesitas dominar el lenguaje que lo sostiene: clases ES6, módulos, template literals, async/await, y las estructuras de datos que es importante dominar."
     },
     {
       "type": "h2",

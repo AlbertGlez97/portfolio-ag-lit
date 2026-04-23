@@ -14,7 +14,7 @@
   "vlabel": "// lifecycle · propiedades · templates · slots · Shadow DOM",
   "title": "LitElement en profundidad:",
   "title_accent": "ciclo de vida, propiedades y templates",
-  "excerpt": "Deep-dive en LitElement: el estándar Web Components, el ciclo de vida completo, propiedades reactivas, todos los tipos de binding, directivas, Shadow DOM CSS y slots. Con las trampas del examen integradas.",
+  "excerpt": "Deep-dive en LitElement: el estándar Web Components, el ciclo de vida completo, propiedades reactivas, todos los tipos de binding, directivas, Shadow DOM CSS y slots. Con los errores frecuentes integrados.",
   "toc": [
     {
       "id": "web-components",
@@ -383,7 +383,7 @@
     },
     {
       "type": "p",
-      "text": "El Shadow DOM encapsula los estilos: los estilos externos no entran, los internos no salen. Pero hay excepciones importantes que el examen evalúa: las CSS custom properties (variables) sí atraviesan, y <code>::part()</code> permite que el exterior estile partes específicas que el componente decide exponer."
+      "text": "El Shadow DOM encapsula los estilos: los estilos externos no entran, los internos no salen. Pero hay excepciones importantes que debes conocer: las CSS custom properties (variables) sí atraviesan, y <code>::part()</code> permite que el exterior estile partes específicas que el componente decide exponer."
     },
     {
       "type": "code",

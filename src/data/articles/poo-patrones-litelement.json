@@ -237,7 +237,7 @@
     },
     {
       "type": "p",
-      "text": "SOLID es un conjunto de 5 principios que guían el diseño de clases mantenibles y extensibles. El más frecuente en el examen es el <strong>SRP — Single Responsibility Principle</strong>: cada clase debe tener una única razón para cambiar. No significa que solo haga 'una cosa', sino que solo un actor del sistema debería pedirle cambios."
+      "text": "SOLID es un conjunto de 5 principios que guían el diseño de clases mantenibles y extensibles. El más importante es el <strong>SRP — Single Responsibility Principle</strong>: cada clase debe tener una única razón para cambiar. No significa que solo haga 'una cosa', sino que solo un actor del sistema debería pedirle cambios."
     },
     {
       "type": "code",
@@ -320,14 +320,14 @@
     },
     {
       "type": "p",
-      "text": "Los patrones de diseño son soluciones probadas a problemas recurrentes en el diseño de software orientado a objetos. No son código que se copia — son plantillas conceptuales. Los del examen se dividen en creacionales (cómo se crean objetos), estructurales (cómo se organizan) y de comportamiento (cómo se comunican)."
+      "text": "Los patrones de diseño son soluciones probadas a problemas recurrentes en el diseño de software orientado a objetos. No son código que se copia — son plantillas conceptuales. Se dividen en creacionales (cómo se crean objetos), estructurales (cómo se organizan) y de comportamiento (cómo se comunican)."
     },
     {
       "type": "code",
       "lang": "js",
       "file": "mapa-patrones.js",
       "lines": [
-        "// Mapa rapido — cuando el examen dice... usa...",
+        "// Mapa rapido — cuando la pregunta dice... usa...",
         "// 'unica instancia global'              -> Singleton",
         "// 'notifica a observadores directamente' -> Observer",
         "// 'broker intermediario, no se conocen'  -> Pub/Sub",
@@ -389,7 +389,7 @@
     },
     {
       "type": "p",
-      "text": "Son los dos patrones de notificación más confundidos en el examen. La diferencia clave es si hay o no un intermediario. En <strong>Observer</strong>, el Subject mantiene una lista de Observers y los notifica directamente. En <strong>Pub/Sub</strong>, hay un broker — quienes publican y quienes escuchan no se conocen entre sí."
+      "text": "Son los dos patrones de notificación más confundidos. La diferencia clave es si hay o no un intermediario. En <strong>Observer</strong>, el Subject mantiene una lista de Observers y los notifica directamente. En <strong>Pub/Sub</strong>, hay un broker — quienes publican y quienes escuchan no se conocen entre sí."
     },
     {
       "type": "code",
