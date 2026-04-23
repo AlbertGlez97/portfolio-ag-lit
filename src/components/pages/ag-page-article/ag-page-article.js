@@ -16,11 +16,10 @@ const NAV_LINKS_REMOTE = [
 ];
 
 const CATEGORY_LABELS = {
-  threejs: 'Three.js',
-  ia: 'IA',
-  tutor: 'Tutorial',
-  backend: 'Backend',
-  cs: 'Computación',
+  litelement: 'LitElement',
+  javascript: 'JavaScript',
+  algoritmos: 'Algoritmos',
+  linux: 'Linux',
 };
 
 /**

@@ -30,11 +30,10 @@ const TERMINAL_CHIPS = [
 ];
 
 const CATEGORY_LABELS = {
-  threejs: 'Three.js',
-  ia: 'IA',
-  tutor: 'Tutorial',
-  backend: 'Backend',
-  cs: 'Computación',
+  litelement: 'LitElement',
+  javascript: 'JavaScript',
+  algoritmos: 'Algoritmos',
+  linux: 'Linux',
 };
 
 function shuffle(arr) {

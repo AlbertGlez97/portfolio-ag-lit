@@ -17,25 +17,16 @@ const NAV_LINKS_REMOTE = [
   { href: '/#contacto',   sectionId: 'contacto',    idx: '04', label: 'Contacto', keep: true },
 ];
 
-const ARTICLE_FILTERS = [
-  { id: 'all',     label: 'Todos' },
-  { id: 'threejs', label: 'Three.js' },
-  { id: 'ia',      label: 'IA' },
-  { id: 'tutor',   label: 'Tutorial' },
-  { id: 'backend', label: 'Backend' },
-];
-
 const SORT_OPTIONS = [
   { value: 'recent', label: 'Más recientes' },
   { value: 'alpha',  label: 'Alfabético' },
 ];
 
 const CATEGORY_LABELS = {
-  threejs: 'Three.js',
-  ia: 'IA',
-  tutor: 'Tutorial',
-  backend: 'Backend',
-  cs: 'Computación',
+  litelement: 'LitElement',
+  javascript: 'JavaScript',
+  algoritmos: 'Algoritmos',
+  linux: 'Linux',
 };
 
 /**
@@ -101,6 +92,13 @@ class AgPageLaboratorio extends LitElement {
     ];
     const total = articles.length;
 
+    const uniqueCategories = [...new Set(articles.map((a) => a.category))];
+    const categoryChips = uniqueCategories
+      .map((id) => ({ id, label: CATEGORY_LABELS[id] || id }))
+      .sort((a, b) => a.label.localeCompare(b.label));
+    const filters = [{ id: 'all', label: 'Todos' }, ...categoryChips];
+    const categoryLabels = categoryChips.map((c) => c.label);
+
     return html`
       <ag-organism-nav .links=${NAV_LINKS_REMOTE}></ag-organism-nav>
 
@@ -119,7 +117,7 @@ class AgPageLaboratorio extends LitElement {
           </ag-atom-heading>
           <div style="margin-top: 1.375rem">
             <ag-atom-text variant="meta">
-              // ${total} ${total === 1 ? 'artículo' : 'artículos'} · Three.js · IA · Backend · Tutorial
+              // ${total} ${total === 1 ? 'artículo' : 'artículos'}${categoryLabels.length ? ' · ' + categoryLabels.join(' · ') : ''}
             </ag-atom-text>
           </div>
         </div>
@@ -127,7 +125,7 @@ class AgPageLaboratorio extends LitElement {
 
       <ag-organism-articles-board
         .articles=${articles}
-        .filters=${ARTICLE_FILTERS}
+        .filters=${filters}
         .sortOptions=${SORT_OPTIONS}
         searchPlaceholder="Buscar artículo..."
         sortLabel="Ordenar:"
