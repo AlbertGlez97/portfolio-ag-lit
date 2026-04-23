@@ -18,7 +18,7 @@ import '../ag-organism-terminal-quest/ag-organism-terminal-quest.js';
  * <ag-organism-article-reader> — Lector de artículo individual.
  *
  * Dos partes principales:
- *   1. Header: breadcrumb + cat tag + título (con gradient accent opcional)
+ *   1. Header: breadcrumb + tags + título (con gradient accent opcional)
  *      + byline + divider. Con grid overlay de fondo y mask radial.
  *   2. Layout TOC sticky + content. El content es un array de bloques
  *      tipados que se renderizan cada uno con su átomo/molécula.
@@ -54,8 +54,8 @@ import '../ag-organism-terminal-quest/ag-organism-terminal-quest.js';
  *         { label: 'Laboratorio', href: '/laboratorio' },
  *         { label: 'Three.js' }
  *       ],
- *       category: 'threejs',
- *       categoryLabel: 'Three.js',
+ *       tags: ['threejs', 'shaders'],
+ *       tagsLabels: { threejs: 'Three.js', shaders: 'Shaders' },
  *       title: 'Shaders procedurales para terrenos infinitos que no colapsan la',
  *       titleAccent: 'GPU',
  *       byline: {
@@ -154,8 +154,14 @@ class AgOrganismArticleReader extends LitElement {
           ${a.breadcrumb?.length
             ? html`<ag-molecule-breadcrumb .items=${a.breadcrumb}></ag-molecule-breadcrumb>`
             : ''}
-          ${a.categoryLabel
-            ? html`<ag-atom-tag variant=${a.category || ''} size="md">${a.categoryLabel}</ag-atom-tag>`
+          ${a.tags?.length
+            ? html`
+                <div class="tags">
+                  ${a.tags.map(
+                    (t) => html`<ag-atom-tag variant=${t} size="md">${a.tagsLabels?.[t] || t}</ag-atom-tag>`
+                  )}
+                </div>
+              `
             : ''}
           <ag-atom-heading
             level="1"

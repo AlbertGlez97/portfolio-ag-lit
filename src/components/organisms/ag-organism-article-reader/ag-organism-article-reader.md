@@ -1,6 +1,6 @@
 # ag-organism-article-reader
 
-> Lector de artículo individual: header (breadcrumb + cat + título + byline) + layout TOC sticky 240px / content 720px con renderizado tipado de bloques.
+> Lector de artículo individual: header (breadcrumb + tags + título + byline) + layout TOC sticky 240px / content 720px con renderizado tipado de bloques.
 
 ## Propiedades
 
@@ -26,8 +26,11 @@
 ```js
 {
   breadcrumb: [{ label, href? }],
-  category: 'threejs',        // id para el tag variant
-  categoryLabel: 'Three.js',  // label visible del tag
+  tags: ['threejs', 'shaders'],  // array de tag IDs; se renderizan como chips
+  tagsLabels: {                  // mapa id → label (fallback al id si falta)
+    threejs: 'Three.js',
+    shaders: 'Shaders',
+  },
   title: '...',               // texto del h1 (plain fg)
   titleAccent: 'GPU',         // opcional — parte con gradient cyan→purple
   byline: {

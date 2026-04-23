@@ -96,6 +96,8 @@ class AgPageArticle extends LitElement {
       ],
       category: raw.category,
       categoryLabel,
+      tags: raw.tags || [],
+      tagsLabels: CATEGORY_LABELS,
       title: raw.title,
       titleAccent: raw.title_accent || '',
       byline: {

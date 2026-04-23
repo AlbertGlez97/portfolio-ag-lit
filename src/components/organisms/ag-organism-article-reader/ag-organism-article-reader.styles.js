@@ -42,7 +42,10 @@ export const styles = css`
     margin-bottom: var(--space-8);
   }
 
-  .header ag-atom-tag {
+  .header .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     margin-bottom: var(--space-6);
   }
 
