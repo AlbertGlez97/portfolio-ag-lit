@@ -1,6 +1,39 @@
 import contentData from '../data/index.js';
 
 /**
+ * Calcula el tiempo de lectura en minutos a partir de los bloques `body`.
+ *
+ * Extrae texto de los campos `text` y `title` de cada bloque (prosa, 200 wpm)
+ * y del array `lines` de los bloques `code` (código, 100 wpm — se lee más
+ * despacio). Redondea hacia arriba con `Math.ceil`. Mínimo 1 minuto.
+ *
+ * @param {Array} body - Array de bloques del artículo.
+ * @returns {number} Minutos estimados de lectura.
+ */
+export function calcReadMinutes(body) {
+  if (!Array.isArray(body)) return 1;
+
+  let proseWords = 0;
+  let codeWords = 0;
+
+  for (const block of body) {
+    if (block.type === 'code') {
+      codeWords += countWords((block.lines || []).join(' '));
+    } else {
+      if (block.text) proseWords += countWords(block.text);
+      if (block.title) proseWords += countWords(block.title);
+    }
+  }
+
+  const minutes = Math.ceil(proseWords / 200 + codeWords / 100);
+  return Math.max(1, minutes);
+}
+
+function countWords(s) {
+  return s.match(/\S+/g)?.length ?? 0;
+}
+
+/**
  * Servicio de contenido — solo español (es).
  *
  * Encapsula el acceso al catálogo del portafolio. Por defecto consume el
@@ -38,9 +71,9 @@ class ContentService {
           return res.json();
         })
         .then((data) => {
-          this._data = data;
+          this._data = this._enrich(data);
           this._inflight = null;
-          return data;
+          return this._data;
         })
         .catch((err) => {
           this._inflight = null;
@@ -50,8 +83,16 @@ class ContentService {
     }
 
     // Modo bundle: datos ya resueltos desde los módulos JSON
-    this._data = contentData;
+    this._data = this._enrich(contentData);
     return Promise.resolve(this._data);
+  }
+
+  _enrich(data) {
+    const articles = (data.articles || []).map((a) => ({
+      ...a,
+      read_minutes: a.read_minutes ?? calcReadMinutes(a.body),
+    }));
+    return { ...data, articles };
   }
 
   _require() {
