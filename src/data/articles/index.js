@@ -12,4 +12,15 @@
 import diagramasDeFlujo from './diagramas-de-flujo.json';
 import operacionTerminal from './operacion-terminal.json';
 import javascriptEsencial from './javascript-esencial.json';
-import pooPatrones from './poo-patro
+import pooPatrones from './poo-patrones-litelement.json';
+import litElementProfundidad from './litelement-profundidad.json';
+
+export const articles = [
+  diagramasDeFlujo,
+  operacionTerminal,
+  javascriptEsencial,
+  pooPatrones,
+  litElementProfundidad,
+];
+
+export default articles;
