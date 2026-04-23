@@ -218,7 +218,7 @@
     {
       "type": "callout",
       "kind": "error",
-      "title": "requestUpdate() es asíncrono — trampa frecuente del examen",
+      "title": "requestUpdate() es asíncrono — confusión común",
       "text": "<code>requestUpdate()</code> NO renderiza de inmediato. Agenda el render en la cola de microtareas (microtask queue). El componente agrupa todos los cambios del ciclo actual en un solo render. Asignar <code>this.valor = 42</code> antes de <code>appendChild()</code> no renderiza hasta que el elemento esté en el DOM y el microtask se libere."
     },
     {

@@ -175,7 +175,7 @@
     {
       "type": "callout",
       "kind": "warning",
-      "title": "Spread en LitElement — el error más común del examen",
+      "title": "Spread en LitElement — error frecuente",
       "text": "LitElement detecta cambios comparando por referencia (<code>===</code>). Si haces <code>this.items.push(x)</code>, la referencia del array es la misma y Lit <strong>no</strong> re-renderiza. Solución: <code>this.items = [...this.items, x]</code>. Nueva referencia → nuevo render."
     },
     {
@@ -247,8 +247,8 @@
     {
       "type": "callout",
       "kind": "error",
-      "title": "Trampa del examen: .size es propiedad, no método",
-      "text": "<code>mapa.size</code> es correcto. <code>mapa.size()</code> lanza <code>TypeError: mapa.size is not a function</code>. Lo mismo aplica para Set. En el examen aparecen ambas formas — siempre elige la que <strong>no</strong> tiene paréntesis."
+      "title": "Error frecuente: .size es propiedad, no método",
+      "text": "<code>mapa.size</code> es correcto. <code>mapa.size()</code> lanza <code>TypeError: mapa.size is not a function</code>. Lo mismo aplica para Set. Ambas formas aparecen con frecuencia — siempre elige la que <strong>no</strong> tiene paréntesis."
     },
     {
       "type": "h2",
@@ -282,7 +282,7 @@
     {
       "type": "callout",
       "kind": "warning",
-      "title": "401 vs 403 — distinción clave para el examen",
+      "title": "401 vs 403 — distinción clave",
       "text": "<strong>401 Unauthorized</strong>: el servidor no sabe quién eres — no hay token ni credenciales. <strong>403 Forbidden</strong>: el servidor sabe quién eres, pero no tienes permiso para ese recurso. Regla: 401 = 'No sé quién eres'. 403 = 'Sé quién eres, pero no puedes'."
     },
     {

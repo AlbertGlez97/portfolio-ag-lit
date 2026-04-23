@@ -260,7 +260,7 @@
     {
       "type": "callout",
       "kind": "warning",
-      "title": "SOLID en el examen — las 5 letras",
+      "title": "SOLID — las 5 letras",
       "text": "<strong>S</strong> — Single Responsibility: una razón para cambiar. <strong>O</strong> — Open/Closed: abierta para extender, cerrada para modificar. <strong>L</strong> — Liskov: subclase reemplaza al padre sin romper el programa. <strong>I</strong> — Interface Segregation: interfaces pequeñas y específicas. <strong>D</strong> — Dependency Inversion: depender de abstracciones, no de concretos."
     },
     {
@@ -309,7 +309,7 @@
     {
       "type": "callout",
       "kind": "success",
-      "title": "Definición exacta para el examen",
+      "title": "Definición exacta",
       "text": "Un mixin es una <strong>función que recibe una clase y devuelve una nueva clase extendida</strong> con comportamiento adicional. Permite <strong>reutilizar comportamiento entre clases que no comparten herencia directa</strong>. No se instancia directamente. Se apila con <code>ClaseA extends MixinB(MixinC(Base))</code>."
     },
     {
@@ -378,7 +378,7 @@
     {
       "type": "callout",
       "kind": "warning",
-      "title": "Clave del examen: Singleton",
+      "title": "Concepto clave: Singleton",
       "text": "\"Única instancia global accesible mediante un método estático\" → Singleton. Se usa para: configuración global, conexión a base de datos (una sola activa), logger centralizado."
     },
     {
@@ -441,8 +441,8 @@
     {
       "type": "callout",
       "kind": "warning",
-      "title": "Observer vs Pub/Sub — la diferencia del examen",
-      "text": "<strong>Observer</strong>: el Subject conoce a sus Observers, comunicación directa, sin intermediario. Ejemplo: <code>addEventListener</code>. <strong>Pub/Sub</strong>: hay un broker, los actores son anónimos entre sí, totalmente desacoplados. Ejemplo: Kafka, Redis, chat con servidor central. Las palabras clave del examen: 'broker', 'intermediario', 'no se conocen', 'canal', 'topic' → Pub/Sub."
+      "title": "Observer vs Pub/Sub — la diferencia clave",
+      "text": "<strong>Observer</strong>: el Subject conoce a sus Observers, comunicación directa, sin intermediario. Ejemplo: <code>addEventListener</code>. <strong>Pub/Sub</strong>: hay un broker, los actores son anónimos entre sí, totalmente desacoplados. Ejemplo: Kafka, Redis, chat con servidor central. Las palabras clave a detectar: 'broker', 'intermediario', 'no se conocen', 'canal', 'topic' → Pub/Sub."
     },
     {
       "type": "h2",
@@ -480,7 +480,7 @@
     {
       "type": "callout",
       "kind": "warning",
-      "title": "Clave del examen: Strategy",
+      "title": "Concepto clave: Strategy",
       "text": "'Encapsula familia de algoritmos e intercambiarlos en tiempo de ejecución' → Strategy (no Observer). La clave diferenciadora: los algoritmos son intercambiables y el cambio ocurre en runtime sin tocar el código del contexto."
     },
     {
@@ -519,7 +519,7 @@
     {
       "type": "callout",
       "kind": "warning",
-      "title": "Clave del examen: Factory Method",
+      "title": "Concepto clave: Factory Method",
       "text": "'Crear objetos sin especificar la clase exacta' → Factory Method. El cliente solo indica qué tipo necesita; la fábrica decide qué clase concreta construir. Diferencia con Prototype: Prototype clona objetos existentes; Factory crea instancias nuevas."
     },
     {
