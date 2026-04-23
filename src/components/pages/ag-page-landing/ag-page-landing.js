@@ -93,8 +93,8 @@ class AgPageLanding extends LitElement {
 
     const labArticles = articles
       .slice()
-      .sort((a, b) => (b.published_at || '').localeCompare(a.published_at || ''))
-      .slice(0, 4)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3)
       .map((a) => ({
         category: a.category,
         categoryLabel: CATEGORY_LABELS[a.category] || a.category,
