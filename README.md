@@ -2,7 +2,7 @@
 
 Portafolio personal de **Alberto González** — Full Stack × IA.
 
-SPA construida con **Lit 3** y **Vite 5** siguiendo **Atomic Design** estricto (átomos → moléculas → organismos → páginas). Contenido multilenguaje (`es` / `en`) cargado de forma asíncrona desde JSON como si fuera un endpoint REST, router propio sobre History API, y una terminal interactiva tipo quest como pieza distintiva del landing.
+SPA construida con **Lit 3** y **Vite 5** siguiendo **Atomic Design** estricto (átomos → moléculas → organismos → páginas). Contenido en español cargado de forma asíncrona desde JSON como si fuera un endpoint REST, router propio sobre History API, y una terminal interactiva tipo quest como pieza distintiva del landing.
 
 ## Stack
 
@@ -15,7 +15,6 @@ SPA construida con **Lit 3** y **Vite 5** siguiendo **Atomic Design** estricto (
 | Arquitectura | Atomic Design + separación JS / styles / manual por componente |
 | Router | History API minimalista (sin dependencias) |
 | Contenido | JSON versionado en `src/data/`, consumido vía `content.service.js` |
-| i18n | Servicio propio `i18n.service.js` (es / en) |
 | Deploy | Vercel (`vercel.json`) y Netlify (`public/_redirects`) con fallback SPA |
 
 ## Estructura del proyecto
@@ -83,9 +82,9 @@ npm run build     # build de producción a /dist
 npm run preview   # preview del build
 ```
 
-## Contenido e i18n
+## Contenido
 
-Todo el contenido vive en `src/data/` como JSON. Los `translations.<locale>` anidados mantienen la estructura lista para conectar una API real: cuando eso pase, solo cambia la URL en `content.service.js`. El shape completo está documentado en `src/data/schema.md`.
+Todo el contenido vive en `src/data/` como JSON y se carga de forma asíncrona a través de `content.service.js`, imitando la firma de un endpoint REST. Cuando se conecte una API real, solo cambia la URL en el servicio — el resto de la app no se entera. El shape completo está documentado en `src/data/schema.md`.
 
 ## Deploy
 
