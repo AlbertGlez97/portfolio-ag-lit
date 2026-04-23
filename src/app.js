@@ -6,11 +6,10 @@ import { contentService } from './services/content.service.js';
  * <ag-app> — Shell raíz de la aplicación.
  *
  * Responsabilidades:
- *   1. Cargar el contenido vía `content.service` (fetch a `content.json`).
- *   2. Inicializar `i18n.service` con los idiomas disponibles.
- *   3. Arrancar el router y exponer un outlet `<slot name="page">` donde
+ *   1. Cargar el contenido vía `content.service`.
+ *   2. Arrancar el router y exponer un outlet `<slot name="page">` donde
  *      se monta la página activa.
- *   4. Mostrar un placeholder de arranque mientras el contenido se carga,
+ *   3. Mostrar un placeholder de arranque mientras el contenido se carga,
  *      y un estado de error si algo sale mal.
  *
  * Nota: este componente NO renderiza nav ni footer — esos son organismos

@@ -12,8 +12,7 @@
 
 - **Light DOM (`createRenderRoot() { return this; }`)**: requisito documentado en `ag-organism-nav.md`. Los ids de section viven en el DOM global para que el IntersectionObserver del nav los encuentre.
 - **Loading y error states**: mientras `contentService.load()` está en vuelo, renderiza `.ag-page-loading` (spinner textual). Si falla, `.ag-page-error` con el mensaje. Clases definidas en `src/styles/pages.css`.
-- **i18n**: se suscribe a `i18nService` en connectedCallback; cualquier `i18nService.set(locale)` dispara un `requestUpdate()` que re-renderiza toda la page con el nuevo locale.
-- **Constantes page-level**: `NAV_LINKS`, `TERMINAL_CHIPS`, `CATEGORY_LABELS` viven en este archivo. Localizar en el futuro implica moverlas a content.json o calcular desde i18nService.
+- **Constantes page-level**: `NAV_LINKS`, `TERMINAL_CHIPS`, `CATEGORY_LABELS` viven en este archivo.
 - **Section ids**:
   - `#proyectos` → sobre el host de `ag-organism-projects-grid`
   - `#laboratorio` → sobre el host de `ag-organism-laboratorio-list`

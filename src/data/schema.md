@@ -1,27 +1,22 @@
-# content.json — Schema
+# content — Schema
 
-Fuente única de verdad del contenido del portafolio. Multilenguaje (`es`, `en`), con shape
-pensado para migrar a una API REST sin tocar el cliente — solo cambia la URL en
-`content.service.js`.
+Fuente única de verdad del contenido del portafolio. Shape pensado para migrar a
+una API REST sin tocar el cliente — solo cambia la URL en `content.service.js`.
+
+Contenido **monolingüe en español**. El bundle se compone en `src/data/index.js`
+a partir de los JSON modulares (`personal.json`, `projects.json`, `skills.json`,
+`terminal.json`) y el barril de `articles/`.
 
 ## Reglas generales
 
 - **Keys en inglés** (`published_at`, `read_minutes`) — reflejan un endpoint REST.
-- **Traducciones anidadas** bajo `translations.<locale>` dentro de cada entidad.
 - **IDs únicos** por entidad. Slugs URL-safe en artículos.
 - **Fechas en ISO-8601** (`YYYY-MM-DD`).
 - **Ordenables** — los arrays relevantes incluyen `order` o `published_at`.
 
 ## Entidades
 
-### `meta`
-
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| `available_locales` | `string[]` | Idiomas soportados. Orden importa (el primero es fallback). |
-| `default_locale` | `string` | Idioma inicial al arrancar la app. |
-
-### `personal_info.<locale>`
+### `personal_info`
 
 | Campo | Tipo | Ejemplo |
 |-------|------|---------|
@@ -42,7 +37,7 @@ Contadores de la barra de stats del landing.
 | `id` | `string` | `"years"` |
 | `value` | `string` | `"5"` (string para admitir "∞", "01") |
 | `unit` | `string` | `"+"`, `"/h"`, o `""` |
-| `translations.<locale>.label` | `string` | "Años de exp." / "Years exp." |
+| `label` | `string` | "Años de exp." |
 
 ### `projects[]`
 
@@ -52,12 +47,12 @@ Contadores de la barra de stats del landing.
 | `order` | `number` | Posición en el grid. |
 | `icon` | `string` | Glifo — ej: `"◐"`, `"◇"`, `"⎔"`. |
 | `year` | `number` | Año del proyecto. |
-| `type` | `string` | `"producto"`, `"open source"`, `"infra"`. |
+| `type` | `string` | `"producto"`, `"open source"`, `"infra"`, `"web"`. |
 | `cta_label` | `string` | `"live"`, `"code"`, `"case"`. |
 | `cta_url` | `string` | URL del CTA. |
-| `tags` | `string[]` | Stack tecnológico (no traducir — nombres propios). |
-| `translations.<locale>.title` | `string` | Título localizado. |
-| `translations.<locale>.description` | `string` | 1–2 frases. |
+| `tags` | `string[]` | Stack tecnológico. |
+| `title` | `string` | Título del proyecto. |
+| `description` | `string` | 1–2 frases. |
 
 ### `articles[]`
 
@@ -71,10 +66,10 @@ Contadores de la barra de stats del landing.
 | `read_minutes` | `number` | Tiempo estimado de lectura. |
 | `featured` | `boolean` | Si `true` aparece como destacado en `/laboratorio`. |
 | `related_ids` | `string[]` | IDs de artículos relacionados. |
-| `translations.<locale>.title` | `string` | Título localizado. |
-| `translations.<locale>.excerpt` | `string` | Resumen de 1–2 frases. |
-| `translations.<locale>.toc` | `{ id, label }[]` | Tabla de contenidos precomputada. |
-| `translations.<locale>.body` | `Block[]` | Ver tipos de bloque abajo. |
+| `title` | `string` | Título del artículo. |
+| `excerpt` | `string` | Resumen de 1–2 frases. |
+| `toc` | `{ id, label }[]` | Tabla de contenidos precomputada. |
+| `body` | `Block[]` | Ver tipos de bloque abajo. |
 
 #### Tipos de bloque (`body[]`)
 
@@ -120,7 +115,7 @@ Contadores de la barra de stats del landing.
 | `id` | `string` | `"frontend"`, `"backend"`, `"ia"`, `"infra"`, `"design"`. |
 | `level` | `number` | 0–10 para la barra visual del terminal. |
 | `items` | `string[]` | Tecnologías — ej: `["React", "Next", "Three.js"]`. |
-| `translations.<locale>.label` | `string` | "Frontend" / "Frontend". |
+| `label` | `string` | "Frontend". |
 
 ### `social_links[]`
 
@@ -137,12 +132,12 @@ Contadores de la barra de stats del landing.
 |-------|------|-------------|
 | `email` | `string` | Email principal. |
 | `response_time_hours` | `number` | Texto tipo "respondo en menos de 24h". |
-| `translations.<locale>.intro` | `string` | Párrafo sobre el formulario. |
-| `translations.<locale>.form_placeholders` | `{ name, email, message }` | Placeholders del form. |
+| `intro` | `string` | Párrafo sobre el formulario. |
+| `form_placeholders` | `{ name, email, message }` | Placeholders del form. |
 
 ### `terminal`
 
-Datos que alimentan el organismo `ag-organism-terminal` del landing. NO se localiza — todos los valores son técnicos (identifiers de sistema, nombres de herramientas, comandos). Si se quisiera localizar "cafés por hora" u otros textos del `now`, se lleva a `translations.<locale>` en esa sub-entidad.
+Datos que alimentan el organismo `ag-organism-terminal` del landing. Valores técnicos (identifiers de sistema, nombres de herramientas, comandos).
 
 | Campo | Tipo | Ejemplo |
 |-------|------|---------|

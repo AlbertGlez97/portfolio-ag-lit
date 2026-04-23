@@ -9,7 +9,6 @@
  * el assert `{ type: 'json' }`.
  */
 
-import meta from './meta.json';
 import personal from './personal.json';
 import projects from './projects.json';
 import articles from './articles/index.js';
@@ -17,7 +16,6 @@ import skills from './skills.json';
 import terminal from './terminal.json';
 
 export default {
-  ...meta,
   ...personal,
   projects: projects.projects,
   articles: articles,
@@ -26,7 +24,6 @@ export default {
 };
 
 // Named exports para consumo granular
-export { default as metaData }      from './meta.json';
 export { default as personalData }  from './personal.json';
 export { default as projectsData }  from './projects.json';
 export { default as articlesData }  from './articles/index.js';

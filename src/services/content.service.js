@@ -5,9 +5,9 @@ import contentData from '../data/index.js';
  *
  * Encapsula el acceso al catálogo del portafolio. Por defecto consume el
  * bundle importado desde `../data/index.js` (combinación modular de
- * meta.json, personal.json, projects.json, articles.json, skills.json y
- * terminal.json). Cuando esté disponible un endpoint REST real, llamar
- * `configure({ url })` antes de `load()` para hacer fetch remoto.
+ * personal.json, projects.json, articles/, skills.json y terminal.json).
+ * Cuando esté disponible un endpoint REST real, llamar `configure({ url })`
+ * antes de `load()` para hacer fetch remoto.
  *
  * @example
  *   import { contentService } from './content.service.js';

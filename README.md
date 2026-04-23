@@ -48,7 +48,6 @@ portfolio-ag/
     │   └── ag-router.js            router History API
     ├── services/
     │   ├── content.service.js      carga async de contenido
-    │   ├── i18n.service.js         gestión de idiomas
     │   └── terminal-commands.js    lógica del organismo terminal
     ├── utils/
     │   ├── escape-html.js
