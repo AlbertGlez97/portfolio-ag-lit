@@ -7,13 +7,19 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "lit": "^3.2.0",
     "mermaid": "^11.14.0"
   },
   "devDependencies": {
-    "vite": "^5.4.0"
+    "@open-wc/testing-helpers": "^3.0.1",
+    "happy-dom": "^20.10.6",
+    "vite": "^5.4.0",
+    "vitest": "^4.1.10"
   }
 }
