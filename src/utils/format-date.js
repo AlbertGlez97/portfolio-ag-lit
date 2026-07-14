@@ -24,9 +24,9 @@ export function formatDateDots(iso, locale = 'es') {
   if (!iso) return '';
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return '';
-  const day = String(d.getDate()).padStart(2, '0');
+  const day = String(d.getUTCDate()).padStart(2, '0');
   const months = MONTHS_SHORT[locale] || MONTHS_SHORT.es;
-  return `${day} · ${months[d.getMonth()]} · ${d.getFullYear()}`;
+  return `${day} · ${months[d.getUTCMonth()]} · ${d.getUTCFullYear()}`;
 }
 
 /**
@@ -39,5 +39,5 @@ export function formatDateLong(iso, locale = 'es') {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return '';
   const months = MONTHS_TITLE[locale] || MONTHS_TITLE.es;
-  return `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
+  return `${d.getUTCDate()} ${months[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
 }

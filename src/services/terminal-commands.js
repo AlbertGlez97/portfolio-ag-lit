@@ -5,7 +5,7 @@ import { escapeHtml } from '../utils/escape-html.js';
  * @param {number} level
  * @returns {string}
  */
-function renderBar(level) {
+export function renderBar(level) {
   const filled = Math.max(0, Math.min(10, Number(level) || 0));
   return '▓'.repeat(filled) + '░'.repeat(10 - filled);
 }
@@ -16,7 +16,7 @@ function renderBar(level) {
  * @param {string} s
  * @param {number} n
  */
-function padEnd(s, n) {
+export function padEnd(s, n) {
   const str = String(s || '');
   if (str.length >= n) return str;
   return str + ' '.repeat(n - str.length);
