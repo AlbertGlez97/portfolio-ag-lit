@@ -184,13 +184,13 @@ export function buildCommands({
 
     'cat readme.md': () => {
       const content = readmeContent || '';
+      if (!content) {
+        return { lines: [{ t: 'out', html: '<span class="warn">(readme vacío en content.json)</span>' }] };
+      }
       const lines = content.split('\n').map((line) => ({
         t: 'out',
         html: line ? escapeHtml(line) : '&nbsp;',
       }));
-      if (lines.length === 0) {
-        lines.push({ t: 'out', html: '<span class="warn">(readme vacío en content.json)</span>' });
-      }
       return { lines };
     },
 

@@ -47,7 +47,7 @@ function countWords(s) {
  *   await contentService.load();
  *   const projects = contentService.getProjects();
  */
-class ContentService {
+export class ContentService {
   constructor() {
     this._url = null;
     this._data = null;
