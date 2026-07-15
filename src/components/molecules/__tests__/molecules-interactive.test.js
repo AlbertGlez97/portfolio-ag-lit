@@ -203,6 +203,19 @@ describe('ag-molecule-breadcrumb', () => {
     const el = track(await mount('ag-molecule-breadcrumb', { items: ITEMS }));
     expect(el.getAttribute('aria-label')).toBe('Breadcrumb');
   });
+
+  it('item sin href y no último renderiza como span sin enlace', async () => {
+    // Branch: no isLast, no href → span sin enlace
+    const itemsWithSpan = [
+      { label: 'Home', href: '/' },
+      { label: 'Sin enlace' },    // ← no href, no último
+      { label: 'Actual' },        // ← último
+    ];
+    const el = track(await mount('ag-molecule-breadcrumb', { items: itemsWithSpan }));
+    const spans = el.shadowRoot.querySelectorAll('span:not(.current):not(.sep)');
+    const noLinkSpan = Array.from(spans).find((s) => s.textContent.trim() === 'Sin enlace');
+    expect(noLinkSpan).toBeTruthy();
+  });
 });
 
 // ─── ag-molecule-form-field ──────────────────────────────────────────────────

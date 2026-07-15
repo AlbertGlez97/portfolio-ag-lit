@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { buildCommands } from '../terminal-commands.js';
 
 const BASE = {
@@ -198,5 +198,31 @@ describe('buildCommands — echo', () => {
   it('sin argumentos retorna string vacío', () => {
     const { lines } = buildCommands(BASE).echo();
     expect(lines[0].html).toBe('');
+  });
+});
+
+describe('buildCommands — sudo hire (then callback)', () => {
+  beforeEach(() => vi.useFakeTimers());
+  afterEach(() => vi.useRealTimers());
+
+  it('then callback no lanza error sin elemento #contacto en el DOM', () => {
+    const result = buildCommands(BASE)['sudo hire']();
+    expect(typeof result.then).toBe('function');
+    result.then();
+    vi.advanceTimersByTime(1300);
+    // Branch "if (target)" = false — sin elemento, no lanza error
+  });
+
+  it('then callback hace scrollIntoView cuando existe #contacto', () => {
+    const target = document.createElement('div');
+    target.id = 'contacto';
+    const scrollSpy = vi.fn();
+    target.scrollIntoView = scrollSpy;
+    document.body.appendChild(target);
+    const result = buildCommands(BASE)['sudo hire']();
+    result.then();
+    vi.advanceTimersByTime(1300);
+    expect(scrollSpy).toHaveBeenCalledWith({ behavior: 'smooth' });
+    target.remove();
   });
 });
