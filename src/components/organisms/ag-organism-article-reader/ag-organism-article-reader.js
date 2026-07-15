@@ -179,7 +179,7 @@ class AgOrganismArticleReader extends LitElement {
                   author=${a.byline.author || ''}
                   date=${a.byline.date || ''}
                   readTime=${a.byline.readTime || ''}
-                  updated=${a.byline.updated || ''}
+                  updatedText=${a.byline.updated || ''}
                 ></ag-molecule-byline>
               `
             : ''}

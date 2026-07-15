@@ -29,7 +29,7 @@ class AgMoleculeByline extends LitElement {
     author: { type: String },
     date: { type: String },
     readTime: { type: String },
-    updated: { type: String },
+    updatedText: { type: String },
   };
 
   static styles = styles;
@@ -40,7 +40,7 @@ class AgMoleculeByline extends LitElement {
     this.author = '';
     this.date = '';
     this.readTime = '';
-    this.updated = '';
+    this.updatedText = '';
   }
 
   render() {
@@ -51,10 +51,10 @@ class AgMoleculeByline extends LitElement {
       <span>${this.date}</span>
       <span class="bullet" aria-hidden="true">●</span>
       <span>${this.readTime}</span>
-      ${this.updated
+      ${this.updatedText
         ? html`
             <span class="bullet" aria-hidden="true">●</span>
-            <span class="updated">${this.updated}</span>
+            <span class="updated">${this.updatedText}</span>
           `
         : ''}
     `;
